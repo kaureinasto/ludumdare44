@@ -53,6 +53,7 @@
   <ItemGroup>
      <Compile Include="Assets\GameController.cs" />
      <Compile Include="Assets\Player.cs" />
+     <Compile Include="Assets\TextController.cs" />
      <Compile Include="Assets\UIButtonController.cs" />
  <Reference Include="UnityEngine.CoreModule">
  <HintPath>/home/kaur/Unity/Hub/Editor/2017.4.24f1/Editor/Data/Managed/UnityEngine/UnityEngine.CoreModule.dll</HintPath>

@@ -3,17 +3,31 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Player {
-	float age;
+	int age;
 	string playerName;
 	
+	public int incomeRate;
+	
+	public int outgoingRate;
+	
 	public Player(){
-		this.age = 18.0f;
+		this.age = 216;
 		this.playerName = "Roy";
 	}
-	public void AddAge(float age){
-		this.age += age;
+	public void AddAge(int months){
+		this.age += months;
+	}
+	public void RemoveAge(int months){
+		this.age -= months;
+	}
+	public void addIncome(int months){
+		this.incomeRate += months;
+	}
+	public void removeIncome(int months){
+		this.incomeRate -= months;
 	}
 	public float getAge(){
 		return this.age;
 	}
+	
 }

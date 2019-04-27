@@ -16,4 +16,7 @@ public class UIButtonController : MonoBehaviour {
 	public void AddAge(int age){
 		gameController.getPlayer().AddAge(age);
 	}
+	public void RemoveAge(int age){
+		gameController.getPlayer().AddAge(age);
+	}
 }
