@@ -19,7 +19,7 @@ public class outcomeTextController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		this.currentOutgoing.text = "You are growing younger at a rate of " + gameController.getPlayer().getOutgoing() + " every 5 seconds.";
+		this.currentOutgoing.text = "You are growing younger at a rate of " + gameController.getPlayer().getOutgoing() + "every " + gameController.agingPeriod + " seconds";
 	}
 	
 }
