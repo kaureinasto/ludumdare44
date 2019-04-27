@@ -1,0 +1,12 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	0	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+RandomEvent	/home/k/code/ludumdare44/BMbroker/Assets/Scripts/RandomEvent.cs	/^public class RandomEvent : ScriptableObject {$/;"	class	line:4
+description	/home/k/code/ludumdare44/BMbroker/Assets/Scripts/RandomEvent.cs	/^	public string description;$/;"	field	line:6	class:RandomEvent
+ageChange	/home/k/code/ludumdare44/BMbroker/Assets/Scripts/RandomEvent.cs	/^	public float ageChange;$/;"	field	line:7	class:RandomEvent
+incomingChange	/home/k/code/ludumdare44/BMbroker/Assets/Scripts/RandomEvent.cs	/^	public float incomingChange;$/;"	field	line:8	class:RandomEvent
+outGoingChange	/home/k/code/ludumdare44/BMbroker/Assets/Scripts/RandomEvent.cs	/^	public float outGoingChange;$/;"	field	line:9	class:RandomEvent
+inflationChange	/home/k/code/ludumdare44/BMbroker/Assets/Scripts/RandomEvent.cs	/^	public float inflationChange;$/;"	field	line:11	class:RandomEvent

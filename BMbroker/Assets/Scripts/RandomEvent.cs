@@ -4,10 +4,10 @@
 public class RandomEvent : ScriptableObject {
 
 	public string description;
-	public int ageChange;
-	public int incomingChange;
-	public int outGoingChange;
-	
-	public int inflationChange;
-	
+	public float ageChange;
+	public float incomingChange;
+	public float outGoingChange;
+
+	public float inflationChange;
+
 }

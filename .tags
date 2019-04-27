@@ -1,0 +1,6 @@
+RandomEvent	/home/k/code/ludumdare44/BMbroker/Assets/Scripts/RandomEvent.cs	/^public class RandomEvent : ScriptableObject {$/;"	class	line:4
+description	/home/k/code/ludumdare44/BMbroker/Assets/Scripts/RandomEvent.cs	/^	public string description;$/;"	field	line:6	class:RandomEvent
+ageChange	/home/k/code/ludumdare44/BMbroker/Assets/Scripts/RandomEvent.cs	/^	public float ageChange;$/;"	field	line:7	class:RandomEvent
+incomingChange	/home/k/code/ludumdare44/BMbroker/Assets/Scripts/RandomEvent.cs	/^	public float incomingChange;$/;"	field	line:8	class:RandomEvent
+outGoingChange	/home/k/code/ludumdare44/BMbroker/Assets/Scripts/RandomEvent.cs	/^	public float outGoingChange;$/;"	field	line:9	class:RandomEvent
+inflationChange	/home/k/code/ludumdare44/BMbroker/Assets/Scripts/RandomEvent.cs	/^	public float inflationChange;$/;"	field	line:11	class:RandomEvent

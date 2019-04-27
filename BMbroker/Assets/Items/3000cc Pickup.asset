@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Name: 3000cc Pickup
   m_EditorClassIdentifier: 
   picture: {fileID: 21300000, guid: 8d19972d5c9d24ba3b25fd5c0d72c932, type: 3}
+  name: 3000cc Pickup
   value: 100
   incomingRate: 0
   outgoingRate: 25

@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Name: 1300cc Car
   m_EditorClassIdentifier: 
   picture: {fileID: 21300000, guid: 8d19972d5c9d24ba3b25fd5c0d72c932, type: 3}
+  name: 1300cc Car
   value: 65
   incomingRate: 0
   outgoingRate: 12

@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Name: That Damned Ferrari
   m_EditorClassIdentifier: 
   picture: {fileID: 21300000, guid: 8d19972d5c9d24ba3b25fd5c0d72c932, type: 3}
+  name: That Damned Ferrari
   value: 800
   incomingRate: 0
   outgoingRate: 75
