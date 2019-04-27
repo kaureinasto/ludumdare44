@@ -17,6 +17,10 @@ public class UIButtonController : MonoBehaviour {
 		gameController.getPlayer().AddAge(age);
 	}
 	public void RemoveAge(int age){
-		gameController.getPlayer().AddAge(age);
+		gameController.getPlayer().RemoveAge(age);
 	}
+	public void PurchaseProperty(OwnableItem property){
+		gameController.getPlayer().purchaseProperty(property);
+	}
+
 }

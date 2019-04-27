@@ -54,7 +54,9 @@
      <Compile Include="Assets\ageTextController.cs" />
      <Compile Include="Assets\GameController.cs" />
      <Compile Include="Assets\incomeTextController.cs" />
+     <Compile Include="Assets\inventoryText.cs" />
      <Compile Include="Assets\outcomeTextController.cs" />
+     <Compile Include="Assets\OwnableItem.cs" />
      <Compile Include="Assets\Player.cs" />
      <Compile Include="Assets\UIButtonController.cs" />
  <Reference Include="UnityEngine.CoreModule">

@@ -10,13 +10,13 @@ public class Player {
 	
 	public int outgoingRate;
 	
-	ArrayList ownedItems;
+	public ArrayList ownedItems;
 	public Player(){
 		this.age = 216;
 		this.playerName = "Roy";
 		this.outgoingRate = 0;
 		this.incomeRate = 1;
-		this.ownedItems = new ArrayList<OwnableItem>();
+		this.ownedItems = new ArrayList();
 	}
 	public void AddAge(int months){
 		this.age += months;

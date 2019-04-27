@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OwnableItem {
+public class OwnableItem: MonoBehaviour{
 	public string itemName;
 	public int value;
 	public int incomingRate;
