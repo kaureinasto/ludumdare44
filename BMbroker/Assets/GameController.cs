@@ -33,7 +33,9 @@ public class GameController : MonoBehaviour {
 	private IEnumerator randomEvents(){
 		while(true){
 			if(randomEventProbability.Get() >= Random.Range(0.00f,1.00f)){
-
+				RandomEvent random = randomEventController.getEvent();
+				doRandomMath(random);
+				Debug.Log("random event happened, and changed some values, haha");
 			}
 			yield return new WaitForSeconds(agingPeriod);
 		}
@@ -45,6 +47,11 @@ public class GameController : MonoBehaviour {
 	private void doAgeMath(){
 		this.currentage.Set(currentage.Get() + incomingRate.Get() - outgoingRate.Get()); 
 	
+	}
+	public void doRandomMath(RandomEvent random){
+		this.currentage.Add(random.ageChange);
+		this.incomingRate.Add(random.incomingChange);
+		this.outgoingRate.Add(random.outGoingChange);
 	}
 
 	
