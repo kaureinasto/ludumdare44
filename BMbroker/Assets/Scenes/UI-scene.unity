@@ -227,12 +227,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f942f388d0e644febc06a3669114156, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  agingPeriod: 5
+  tickPeriod: {fileID: 0}
   randomEventProbability: {fileID: 11400000, guid: d8c56bbca499540c08583336d38fa962,
     type: 2}
   currentAge: {fileID: 11400000, guid: 4d9763002dd36455a9a496b64b178786, type: 2}
-  incomingRate: {fileID: 11400000, guid: 88a4681b8b33d40d89023a3577fb5ea2, type: 2}
-  outgoingRate: {fileID: 11400000, guid: f15cb04a1555a43c791d491fef85ef8a, type: 2}
+  randomIncomeRate: {fileID: 0}
+  randomOutgoingRate: {fileID: 0}
   inflationRate: {fileID: 11400000, guid: 6dea8512395454e128150b025f863541, type: 2}
   randomEventController: {fileID: 731443042}
 --- !u!4 &73912480
@@ -496,12 +496,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f942f388d0e644febc06a3669114156, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  agingPeriod: 1
+  tickPeriod: {fileID: 0}
   randomEventProbability: {fileID: 11400000, guid: d8c56bbca499540c08583336d38fa962,
     type: 2}
   currentAge: {fileID: 11400000, guid: 4d9763002dd36455a9a496b64b178786, type: 2}
-  incomingRate: {fileID: 11400000, guid: 88a4681b8b33d40d89023a3577fb5ea2, type: 2}
-  outgoingRate: {fileID: 11400000, guid: f15cb04a1555a43c791d491fef85ef8a, type: 2}
+  randomIncomeRate: {fileID: 0}
+  randomOutgoingRate: {fileID: 0}
   inflationRate: {fileID: 11400000, guid: 6dea8512395454e128150b025f863541, type: 2}
   randomEventController: {fileID: 731443042}
 --- !u!4 &357611819
@@ -641,6 +641,24 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 6cfe11de258434b4986d21f942d42627, type: 2}
   - {fileID: 11400000, guid: 0692853cff9264969a227d55199dcc5f, type: 2}
   - {fileID: 11400000, guid: c5484c203270a41eba2ede455033af63, type: 2}
+  - {fileID: 11400000, guid: 9c476d337d828453392822fab0ca6594, type: 2}
+  - {fileID: 11400000, guid: 2f0e9838c5c8b435b9a62d015f4f07b2, type: 2}
+  - {fileID: 11400000, guid: 5983340f9c4594c9ba0b8730d05a7a4b, type: 2}
+  - {fileID: 11400000, guid: 76f202a8eed2e42d0971a0b39bde2c94, type: 2}
+  - {fileID: 11400000, guid: 533589ef2db204832a45fa072463eb2b, type: 2}
+  - {fileID: 11400000, guid: 5fa5bfb6e897e4cb5a75ec811d9f4d7f, type: 2}
+  - {fileID: 11400000, guid: 2af3666ed4a664b44a31487c98d91805, type: 2}
+  - {fileID: 11400000, guid: 141358041cf334577839fdc94bbf03ce, type: 2}
+  - {fileID: 11400000, guid: 917d6a7f330c94e4c9fb52e5d2a73fe2, type: 2}
+  - {fileID: 11400000, guid: 7a6a57099f9ef447bb88330c7676da8b, type: 2}
+  - {fileID: 11400000, guid: fc0151be41f61432b87430cf4952fba9, type: 2}
+  - {fileID: 11400000, guid: 2c5e2490c9f744450b26270f3e56b5a5, type: 2}
+  - {fileID: 11400000, guid: cc347d59380244b2eafe3dd216970694, type: 2}
+  - {fileID: 11400000, guid: 5cf37595aec984b8895e2644b1a6fa7e, type: 2}
+  - {fileID: 11400000, guid: 42378c0da7d5e4970a2d720442ccd81e, type: 2}
+  - {fileID: 11400000, guid: d889a8cb098b94a458d5c3c14646092f, type: 2}
+  - {fileID: 11400000, guid: 68f42337019084d70bf3a7e5d630506f, type: 2}
+  - {fileID: 11400000, guid: 9e8ffd86deddd4f0db3252692c0e837b, type: 2}
 --- !u!114 &445516010
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -866,17 +884,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventList:
   - {fileID: 11400000, guid: b179f87ff13c64ea4ab223026ae5e7f8, type: 2}
-  - {fileID: 11400000, guid: d25f4846801e6499f9b7a200bd712346, type: 2}
-  - {fileID: 11400000, guid: 9dc33edacccc74e229eec5dbbc84700d, type: 2}
-  - {fileID: 11400000, guid: 99ad6c38fe94e49a6aa771b00e4dadcc, type: 2}
-  - {fileID: 11400000, guid: 748e2dfc1344c4096bb7e8763b7c490e, type: 2}
-  - {fileID: 11400000, guid: 26eb3e1bcb52d493581eced67dd82164, type: 2}
-  - {fileID: 11400000, guid: 3742ce628f47048149ae9dec1d880347, type: 2}
-  - {fileID: 11400000, guid: 7300a31dee4ca4ae392908b82d71d452, type: 2}
-  - {fileID: 11400000, guid: e570fc483f75e4df1a97137d3e83f104, type: 2}
-  - {fileID: 11400000, guid: df49eb824d13d4ca3b270e0b1e9b1a4b, type: 2}
-  - {fileID: 11400000, guid: 76ebd1464eadf4566856550139561c18, type: 2}
-  - {fileID: 11400000, guid: c729f8c944591477e9031f45a9368759, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!4 &731443043
 Transform:
   m_ObjectHideFlags: 0

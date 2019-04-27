@@ -11,8 +11,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f0358d836d864093992cc6fd1a9b6ec, type: 3}
   m_Name: New Random Event 6
   m_EditorClassIdentifier: 
-  description: 
+  description: Your city is hit with an age-idemic. People dying of old age. Area
+    quarantined.
   ageChange: 0
-  incomingChange: 0
-  outGoingChange: 0
+  incomingChange: 3
+  outGoingChange: 0.3
   inflationChange: 0
