@@ -14,7 +14,7 @@ public class outcomeTextController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		this.currentOutgoing.text = "You lose age at " + outgoing.Get() + " per tick.";
+		this.currentOutgoing.text = "You lose age at " + outgoing.Value() + " per tick.";
 	}
 	
 }

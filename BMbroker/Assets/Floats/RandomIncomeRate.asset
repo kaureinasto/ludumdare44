@@ -8,11 +8,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f0358d836d864093992cc6fd1a9b6ec, type: 3}
-  m_Name: New Random Event 11
+  m_Script: {fileID: 11500000, guid: f783ed99183b94f4bba4de751fe3f535, type: 3}
+  m_Name: RandomIncomeRate
   m_EditorClassIdentifier: 
-  description: Shat yourself
-  ageChange: 12
-  incomingChange: 1
-  outGoingChange: 1
-  inflationChange: 0
+  value: 0

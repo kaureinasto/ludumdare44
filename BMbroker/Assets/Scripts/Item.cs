@@ -10,8 +10,7 @@ public class Item : MonoBehaviour
     public Button SellButton;
     
     public ObservableFloat currentAge;
-    public ObservableFloat incomingRate;
-    public ObservableFloat outgoingRate;
+    public ObservableFloat tickPeriod;
 
     private ItemData _itemData;
     private int _count;
@@ -20,7 +19,19 @@ public class Item : MonoBehaviour
     {
         SellButton.interactable = false;
         CountText.text = "0";
+        StartCoroutine(TickRoutine());
     }
+
+    private IEnumerator TickRoutine()
+    {
+        while(true)
+        {
+            currentAge.Add(_itemData.incomingRate * _count);
+            currentAge.Substract(_itemData.outgoingRate * _count);
+            yield return new WaitForSeconds(tickPeriod.Value());
+        }
+    }
+
     public void SetItemData(ItemData itemData)
     {
         _itemData = itemData;
@@ -33,8 +44,6 @@ public class Item : MonoBehaviour
         _count++;
         CountText.text = _count.ToString();
         currentAge.Substract(_itemData.value);
-        incomingRate.Add(_itemData.incomingRate);
-        outgoingRate.Add(_itemData.outgoingRate);
         SellButton.interactable = true;
     }
     
@@ -44,8 +53,6 @@ public class Item : MonoBehaviour
         
         Debug.Log("Sell " + _itemData.name);
         currentAge.Add(_itemData.value);
-        incomingRate.Substract(_itemData.incomingRate);
-        outgoingRate.Substract(_itemData.outgoingRate);
         _count--;
 
         CountText.text = _count.ToString();
