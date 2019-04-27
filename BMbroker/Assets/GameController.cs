@@ -10,6 +10,7 @@ public class GameController : MonoBehaviour {
 	public ObservableFloat outgoingRate;
 	public ObservableFloat inflationRate;
 
+	public RandomEventController randomEventController;
 	void Start () {
 		StartCoroutine(calculateAge());
 		StartCoroutine(randomEvents());
@@ -32,6 +33,7 @@ public class GameController : MonoBehaviour {
 	private IEnumerator randomEvents(){
 		while(true){
 			if(randomEventProbability.Get() >= Random.Range(0.00f,1.00f)){
+
 			}
 			yield return new WaitForSeconds(agingPeriod);
 		}

@@ -893,6 +893,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eff36666d9651476f8f2a891d77ef76c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  eventList:
+  - {fileID: 11400000, guid: b179f87ff13c64ea4ab223026ae5e7f8, type: 2}
+  - {fileID: 11400000, guid: d25f4846801e6499f9b7a200bd712346, type: 2}
+  - {fileID: 11400000, guid: 9dc33edacccc74e229eec5dbbc84700d, type: 2}
+  - {fileID: 11400000, guid: 99ad6c38fe94e49a6aa771b00e4dadcc, type: 2}
+  - {fileID: 11400000, guid: 748e2dfc1344c4096bb7e8763b7c490e, type: 2}
+  - {fileID: 11400000, guid: 26eb3e1bcb52d493581eced67dd82164, type: 2}
+  - {fileID: 11400000, guid: 3742ce628f47048149ae9dec1d880347, type: 2}
+  - {fileID: 11400000, guid: 7300a31dee4ca4ae392908b82d71d452, type: 2}
+  - {fileID: 11400000, guid: e570fc483f75e4df1a97137d3e83f104, type: 2}
+  - {fileID: 11400000, guid: df49eb824d13d4ca3b270e0b1e9b1a4b, type: 2}
+  - {fileID: 11400000, guid: 76ebd1464eadf4566856550139561c18, type: 2}
+  - {fileID: 11400000, guid: c729f8c944591477e9031f45a9368759, type: 2}
 --- !u!1 &999551798
 GameObject:
   m_ObjectHideFlags: 0
@@ -1014,7 +1027,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ddef62b58cf9445abc9256ac3f4097e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: Car
+  picture: {fileID: 0}
   value: 1
   incomingRate: 12
   outgoingRate: 2
@@ -1052,6 +1065,7 @@ MonoBehaviour:
   incomingRate: {fileID: 11400000, guid: 88a4681b8b33d40d89023a3577fb5ea2, type: 2}
   outgoingRate: {fileID: 11400000, guid: f15cb04a1555a43c791d491fef85ef8a, type: 2}
   inflationRate: {fileID: 11400000, guid: 6dea8512395454e128150b025f863541, type: 2}
+  randomEventController: {fileID: 839895711}
 --- !u!4 &1141279796
 Transform:
   m_ObjectHideFlags: 0

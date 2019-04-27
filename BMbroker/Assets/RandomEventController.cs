@@ -8,7 +8,7 @@ public class RandomEventController : MonoBehaviour {
 	ObservableFloat income;
 	ObservableFloat outgoing;
 
-	List<RandomEvent> eventList;
+	public List<RandomEvent> eventList;
 	RandomEvent getEvent(){
 		return this.eventList[Random.Range(0,this.eventList.Count)];
 	}
