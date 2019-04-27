@@ -18,7 +18,6 @@ public class incomeTextController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		this.currentIncome.text = "You are currently aging at a rate of " + gameController.getPlayer().getIncome() + "every " + gameController.agingPeriod + " seconds";
 	}
 	
 }

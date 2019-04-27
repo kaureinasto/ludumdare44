@@ -18,7 +18,6 @@ public class ageTextController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		this.currentAge.text = "Your current age is " + gameController.getPlayer().getAge() + " months.";
 	}
 	
 }
