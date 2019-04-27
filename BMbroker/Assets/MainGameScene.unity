@@ -477,7 +477,7 @@ MonoBehaviour:
         m_MethodName: PurchaseProperty
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 1123926142}
+          m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: OwnableItem, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -995,7 +995,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1123926141}
-  - component: {fileID: 1123926142}
   m_Layer: 0
   m_Name: Car
   m_TagString: Untagged
@@ -1016,6 +1015,7 @@ Transform:
   m_Father: {fileID: 474849084}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< Updated upstream
 --- !u!114 &1123926142
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1031,6 +1031,8 @@ MonoBehaviour:
   value: 1
   incomingRate: 12
   outgoingRate: 2
+=======
+>>>>>>> Stashed changes
 --- !u!1 &1141279794
 GameObject:
   m_ObjectHideFlags: 0
@@ -1061,7 +1063,7 @@ MonoBehaviour:
   agingPeriod: 1
   randomEventProbability: {fileID: 11400000, guid: d8c56bbca499540c08583336d38fa962,
     type: 2}
-  currentage: {fileID: 11400000, guid: 4d9763002dd36455a9a496b64b178786, type: 2}
+  currentAge: {fileID: 0}
   incomingRate: {fileID: 11400000, guid: 88a4681b8b33d40d89023a3577fb5ea2, type: 2}
   outgoingRate: {fileID: 11400000, guid: f15cb04a1555a43c791d491fef85ef8a, type: 2}
   inflationRate: {fileID: 11400000, guid: 6dea8512395454e128150b025f863541, type: 2}

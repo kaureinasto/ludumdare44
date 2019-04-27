@@ -1,18 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class PopulateShop : MonoBehaviour
 {
-    public Buyable buyablePrefab;
-    public OwnableItem[] Items;
+    public Item itemPrefab;
+    public ItemData[] itemDatas;
 
     private void Start()
     {
-        foreach (OwnableItem item in Items)
+        foreach (ItemData itemData in itemDatas)
         {
-            Buyable buyable = GameObject.Instantiate(buyablePrefab, transform);
-            buyable.SetOwnableItem(item);
+            Item item = GameObject.Instantiate(itemPrefab, transform);
+            item.SetItemData(itemData);
         }
     }
 }
