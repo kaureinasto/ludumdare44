@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-public class TextController : MonoBehaviour {
+public class ageTextController : MonoBehaviour {
 	GameController gameController;
 	
 	private Text currentAge;
@@ -20,4 +20,5 @@ public class TextController : MonoBehaviour {
 	void Update () {
 		this.currentAge.text = "Your current age is " + gameController.getPlayer().getAge() + " months.";
 	}
+	
 }

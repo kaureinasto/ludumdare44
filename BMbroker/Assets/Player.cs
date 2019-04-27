@@ -13,6 +13,8 @@ public class Player {
 	public Player(){
 		this.age = 216;
 		this.playerName = "Roy";
+		this.outgoingRate = 0;
+		this.incomeRate = 1;
 	}
 	public void AddAge(int months){
 		this.age += months;
@@ -26,6 +28,13 @@ public class Player {
 	public void removeIncome(int months){
 		this.incomeRate -= months;
 	}
+	public int getIncome(){
+		return this.incomeRate;
+	}
+	public int getOutgoing(){
+		return this.outgoingRate;
+	}
+
 	public float getAge(){
 		return this.age;
 	}
