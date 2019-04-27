@@ -162,6 +162,8 @@
 -define:ENABLE_NATIVE_ARRAY_CHECKS
 -define:UNITY_TEAM_LICENSE
 'Assets/GameController.cs'
+'Assets/Player.cs'
+'Assets/UIButtonController.cs'
 -r:'/home/kaur/Unity/Hub/Editor/2017.4.24f1/Editor/Data/Mono/lib/mono/unity/System.Runtime.Serialization.dll'
 -r:'/home/kaur/Unity/Hub/Editor/2017.4.24f1/Editor/Data/Mono/lib/mono/unity/System.Xml.Linq.dll'
 -r:'/home/kaur/Unity/Hub/Editor/2017.4.24f1/Editor/Data/Mono/lib/mono/unity/UnityScript.dll'
