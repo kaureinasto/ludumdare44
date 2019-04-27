@@ -13,7 +13,7 @@ public class ageTextController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		this.currentAge.text = "You are " + this.age.Get() + " months old, which means you are " + this.age.Get()/12 + " years old.";
+		this.currentAge.text = "You are " + this.age.Value() + " months old, which means you are " + this.age.Value()/12 + " years old.";
 	}
 	
 }

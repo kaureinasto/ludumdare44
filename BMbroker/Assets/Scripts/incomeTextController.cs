@@ -12,7 +12,7 @@ public class incomeTextController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		currentIncome.text = "You gain age at " + income.Get() + " per tick,";
+		currentIncome.text = "You gain age at " + income.Value() + " per tick,";
 	}
 	
 }

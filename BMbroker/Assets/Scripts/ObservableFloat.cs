@@ -27,7 +27,7 @@ public class ObservableFloat : ScriptableObject
         Set(value - amount);
     }
 
-    public float Get()
+    public float Value()
     {
         return value;
     }
