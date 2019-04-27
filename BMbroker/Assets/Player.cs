@@ -10,14 +10,27 @@ public class Player {
 	
 	public int outgoingRate;
 	
+	ArrayList ownedItems;
 	public Player(){
 		this.age = 216;
 		this.playerName = "Roy";
 		this.outgoingRate = 0;
 		this.incomeRate = 1;
+		this.ownedItems = new ArrayList<OwnableItem>();
 	}
 	public void AddAge(int months){
 		this.age += months;
+	}
+	public void purchaseProperty(OwnableItem item){
+		this.ownedItems.Add(item);
+		this.incomeRate += item.incomingRate;
+		this.outgoingRate -= item.outgoingRate;
+		this.age -= item.value;
+	}
+	public void sellProperty(OwnableItem item){
+		this.ownedItems.Remove(item);
+		this.incomeRate -= item.incomingRate;
+		this.outgoingRate += item.outgoingRate;
 	}
 	public void RemoveAge(int months){
 		this.age -= months;
