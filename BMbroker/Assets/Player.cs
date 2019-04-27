@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class Player {
 	int age;
-	string playerName;
-	
+	public string playerName;
+	ObservableFloat playerAge;
+	ObservableFloat playerIncoming;
 	public int incomeRate;
 	
 	public int outgoingRate;

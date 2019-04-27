@@ -4,26 +4,34 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour {
 	public float agingPeriod = 5f;
-	public float randomEventProbability = 0.01f;
+	public ObservableFloat randomEventProbability;
 	public ObservableFloat currentage;
 	public ObservableFloat incomingRate;
 	public ObservableFloat outgoingRate;
+	public ObservableFloat inflationRate;
 
 	void Start () {
 		StartCoroutine(calculateAge());
 		StartCoroutine(randomEvents());
+		StartCoroutine(yearlyChange());
 	}
-	
+
 	private IEnumerator calculateAge(){	
 		while(true){
 		this.doAgeMath();
 		yield return new WaitForSeconds(agingPeriod);
 		}
 	}
+
+	private IEnumerator yearlyChange(){	
+		while(true){
+			this.inflationRate.Set(this.inflationRate.Get()*Random.Range(0.01f, 0.03f));
+		yield return new WaitForSeconds(agingPeriod*12);
+		}
+	}
 	private IEnumerator randomEvents(){
 		while(true){
-			if(randomEventProbability >= Random.Range(0.00f,1.00f)){
-				Debug.Log("random event everybody");
+			if(randomEventProbability.Get() >= Random.Range(0.00f,1.00f)){
 			}
 			yield return new WaitForSeconds(agingPeriod);
 		}
