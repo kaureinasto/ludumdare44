@@ -15,3 +15,4 @@ MonoBehaviour:
   ageChange: 12
   incomingChange: 1
   outGoingChange: 1
+  inflationChange: 0

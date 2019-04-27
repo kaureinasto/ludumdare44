@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 [CreateAssetMenu]
-public class OwnableItem : ScriptableObject
+public class ItemData : ScriptableObject
 {
     public Sprite picture;
     public int value;

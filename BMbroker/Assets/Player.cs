@@ -22,16 +22,16 @@ public class Player {
 	public void AddAge(int months){
 		this.age += months;
 	}
-	public void purchaseProperty(OwnableItem item){
-		this.ownedItems.Add(item);
-		this.incomeRate += item.incomingRate;
-		this.outgoingRate -= item.outgoingRate;
-		this.age -= item.value;
+	public void purchaseProperty(ItemData itemData){
+		this.ownedItems.Add(itemData);
+		this.incomeRate += itemData.incomingRate;
+		this.outgoingRate -= itemData.outgoingRate;
+		this.age -= itemData.value;
 	}
-	public void sellProperty(OwnableItem item){
-		this.ownedItems.Remove(item);
-		this.incomeRate -= item.incomingRate;
-		this.outgoingRate += item.outgoingRate;
+	public void sellProperty(ItemData itemData){
+		this.ownedItems.Remove(itemData);
+		this.incomeRate -= itemData.incomingRate;
+		this.outgoingRate += itemData.outgoingRate;
 	}
 	public void RemoveAge(int months){
 		this.age -= months;

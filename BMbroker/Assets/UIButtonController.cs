@@ -15,7 +15,7 @@ public class UIButtonController : MonoBehaviour {
 	}
 	public void RemoveAge(int age){
 	}
-	public void PurchaseProperty(OwnableItem property){
+	public void PurchaseProperty(ItemData property){
 	}
 
 }

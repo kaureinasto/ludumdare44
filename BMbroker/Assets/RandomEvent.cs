@@ -8,4 +8,6 @@ public class RandomEvent : ScriptableObject {
 	public int incomingChange;
 	public int outGoingChange;
 	
+	public int inflationChange;
+	
 }

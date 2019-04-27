@@ -1016,7 +1016,7 @@ MonoBehaviour:
   agingPeriod: 1
   randomEventProbability: {fileID: 11400000, guid: d8c56bbca499540c08583336d38fa962,
     type: 2}
-  currentage: {fileID: 11400000, guid: 4d9763002dd36455a9a496b64b178786, type: 2}
+  currentAge: {fileID: 11400000, guid: 4d9763002dd36455a9a496b64b178786, type: 2}
   incomingRate: {fileID: 11400000, guid: 88a4681b8b33d40d89023a3577fb5ea2, type: 2}
   outgoingRate: {fileID: 11400000, guid: f15cb04a1555a43c791d491fef85ef8a, type: 2}
   inflationRate: {fileID: 11400000, guid: 6dea8512395454e128150b025f863541, type: 2}
