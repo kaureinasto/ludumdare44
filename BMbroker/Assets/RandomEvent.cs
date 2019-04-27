@@ -1,16 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class RandomEvent : MonoBehaviour {
+[CreateAssetMenu]
+public class RandomEvent : ScriptableObject {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
+	public string description;
+	public int ageChange;
+	public int incomingChange;
+	public int outGoingChange;
 	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 }
