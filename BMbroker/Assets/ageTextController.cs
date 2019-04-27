@@ -7,7 +7,7 @@ public class ageTextController : MonoBehaviour {
 	
 	private Text currentAge;
 	// Use this for initialization
-
+	public ObservableFloat age;
 	void Start () {
 		this.currentAge = GetComponent<Text>();
 
@@ -18,6 +18,7 @@ public class ageTextController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		currentAge.text = "You are " + age.Get() + " months old. ";
 	}
 	
 }

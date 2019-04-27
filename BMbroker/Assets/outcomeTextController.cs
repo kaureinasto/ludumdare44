@@ -4,21 +4,17 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class outcomeTextController : MonoBehaviour {
-
-	GameController gameController;
+	public ObservableFloat outgoing;
 	private Text currentOutgoing;
 	// Use this for initialization
 
 	void Start () {
-		this.currentOutgoing = GetComponent<Text>();
-
-		this.gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
-		
-		
+		this.currentOutgoing = GetComponent<Text>();		
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		this.currentOutgoing.text = "You lose age at " + outgoing.Get() + " per tick.";
 	}
 	
 }
