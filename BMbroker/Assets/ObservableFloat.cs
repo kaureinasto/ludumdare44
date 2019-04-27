@@ -8,7 +8,7 @@ public class ObservableFloat : ScriptableObject
     private float value = 0f;
     public event Action<float> OnChanged;
 
-    public void set(float newValue)
+    public void Set(float newValue)
     {
         value = newValue;
         if (OnChanged != null)
@@ -17,7 +17,17 @@ public class ObservableFloat : ScriptableObject
         }
     }
 
-    public float get()
+    public void Add(float amount)
+    {
+        Set(value + amount);
+    }
+
+    public void Substract(float amount)
+    {
+        Set(value - amount);
+    }
+
+    public float Get()
     {
         return value;
     }
