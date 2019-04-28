@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Item : MonoBehaviour, IAgeEffector
+public class Item : MonoBehaviour
 {
     public Text CountText;
     public Text NameText;
@@ -19,6 +19,7 @@ public class Item : MonoBehaviour, IAgeEffector
     {
         SellButton.interactable = false;
         CountText.text = "0";
+
         StartCoroutine(TickRoutine());
     }
 
@@ -57,10 +58,5 @@ public class Item : MonoBehaviour, IAgeEffector
 
         CountText.text = _count.ToString();
         SellButton.interactable = _count > 0;
-    }
-
-    public float GetEffectPerTick()
-    {
-        return _count * (_itemData.incomingRate - _itemData.outgoingRate);
     }
 }

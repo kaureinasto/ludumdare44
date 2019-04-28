@@ -11,4 +11,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f783ed99183b94f4bba4de751fe3f535, type: 3}
   m_Name: TickPeriod
   m_EditorClassIdentifier: 
-  value: 5
+  value: 0.1
