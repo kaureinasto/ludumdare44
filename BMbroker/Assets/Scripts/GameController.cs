@@ -10,7 +10,7 @@ public class GameController : MonoBehaviour
     public ObservableFloat randomOutgoingRate;
     public ObservableFloat inflationRate;
 
-    public RandomEventController randomEventController;
+    public RandomEventsHolder randomEventsHolder;
     public NotificationDataEvent randomEventNotification;
 
     void Start()
@@ -36,7 +36,7 @@ public class GameController : MonoBehaviour
         {
             if (randomEventProbability.Value() >= Random.Range(0.00f, 1.00f))
             {
-                RandomEvent random = randomEventController.getEvent();
+                RandomEvent random = randomEventsHolder.GetEvent();
                 ProcessRandomEvent(random);
             }
             
