@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ddef62b58cf9445abc9256ac3f4097e, type: 3}
   m_Name: Tricycle
   m_EditorClassIdentifier: 
-  picture: {fileID: 21300000, guid: db4946487b4c84ade93e8f6126f54f79, type: 3}
+  picture: {fileID: 21300000, guid: 8b550e8b456524079a9991d16436ba47, type: 3}
   name: Tricycle
   value: 1
   incomingRate: 0

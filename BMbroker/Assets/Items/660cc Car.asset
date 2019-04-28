@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ddef62b58cf9445abc9256ac3f4097e, type: 3}
   m_Name: 660cc Car
   m_EditorClassIdentifier: 
-  picture: {fileID: 21300000, guid: 9b4e0d27fb3bb43ebaef8e07bf778f23, type: 3}
+  picture: {fileID: 21300000, guid: 0930750ae150f4ea4a0aadcbdf2b3213, type: 3}
   name: 660cc Car
   value: 20
   incomingRate: 0
