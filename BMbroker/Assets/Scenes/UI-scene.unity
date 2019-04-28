@@ -886,7 +886,34 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 114049502428029100, guid: b3c7f16451e874b5ca01971e8f9eca31,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 0.15686275
+      objectReference: {fileID: 0}
+    - target: {fileID: 114049502428029100, guid: b3c7f16451e874b5ca01971e8f9eca31,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0.17254902
+      objectReference: {fileID: 0}
+    - target: {fileID: 114049502428029100, guid: b3c7f16451e874b5ca01971e8f9eca31,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0.20392157
+      objectReference: {fileID: 0}
+    - target: {fileID: 114049502428029100, guid: b3c7f16451e874b5ca01971e8f9eca31,
+        type: 2}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 114644600934809294, guid: b3c7f16451e874b5ca01971e8f9eca31, type: 2}
+    - {fileID: 114977958656392650, guid: b3c7f16451e874b5ca01971e8f9eca31, type: 2}
+    - {fileID: 114240244888070748, guid: b3c7f16451e874b5ca01971e8f9eca31, type: 2}
+    - {fileID: 114836536776461634, guid: b3c7f16451e874b5ca01971e8f9eca31, type: 2}
+    - {fileID: 114995186417632558, guid: b3c7f16451e874b5ca01971e8f9eca31, type: 2}
+    - {fileID: 114624379166773906, guid: b3c7f16451e874b5ca01971e8f9eca31, type: 2}
+    - {fileID: 114264927078926146, guid: b3c7f16451e874b5ca01971e8f9eca31, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: b3c7f16451e874b5ca01971e8f9eca31, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &686791973
@@ -1454,7 +1481,7 @@ RectTransform:
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.35427245, y: 0}
-  m_AnchorMax: {x: 1, y: 0.21333334}
+  m_AnchorMax: {x: 1, y: 0.22500001}
   m_AnchoredPosition: {x: 5, y: 0}
   m_SizeDelta: {x: -20, y: -10}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1470,7 +1497,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 0.15686275, g: 0.17254902, b: 0.20392157, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
