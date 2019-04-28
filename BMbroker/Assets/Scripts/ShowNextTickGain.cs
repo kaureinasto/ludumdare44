@@ -6,43 +6,37 @@ using UnityEngine.UI;
 
 public class ShowNextTickGain : MonoBehaviour
 {
-    private Text _text;
-    private List<IAgeEffector> ageEffectors = new List<IAgeEffector>();
 
     public ObservableFloat income;
-    private void Start()
+    public ObservableFloat costs;
+    public Text text;
+    
+    private void OnEnable()
     {
-        _text = GetComponent<Text>();
-        StartCoroutine(FindEffectors());
+        UpdateText(0f);
+        income.OnChanged += UpdateText;
     }
 
-    private IEnumerator FindEffectors()
+    private void OnDisable()
     {
-        while (ageEffectors.Count == 0)
-        {
-            ageEffectors = FindObjectsOfType<MonoBehaviour>().OfType<IAgeEffector>().ToList();
-            yield return new WaitForSeconds(0.1f);
-        }
+        income.OnChanged -= UpdateText;
     }
 
-    private void Update()
+    private void UpdateText(float whatever)
     {
-        float sum = 0f;
-        foreach (IAgeEffector ageEffector in ageEffectors)
-        {
-            sum += ageEffector.GetEffectPerTick();
+        float gain = income.Value() - costs.Value();
+        
+        if(gain < 0){
+        text.text = "Rate: You are getting younger at a rate of: " + gain.ToString("F1")+ " per tick";
+        text.color = new Color(1, 0.4745098F, 0.7764706F, 1); //pink
         }
-        if(sum < 0){
-        _text.text = "Rate: You are getting younger at a rate of: " + sum.ToString("F1")+ " per tick";
-        _text.color = new Color(255, 121, 198, 255); //pink
+        if(gain == 0){
+        text.text = "Rate: You are not aging :O";
+        text.color = Color.white;
         }
-        if(sum == 0){
-        _text.text = "Rate: You are not aging :O";
-        _text.color = new Color(255, 255, 255, 255); //white
-        }
-        if(sum > 0){
-        _text.text = "Rate: You are growing older at a rate of : " + sum.ToString("F1") +" per tick";
-        _text.color = new Color(80, 250, 123, 255); //green
+        if(gain > 0){
+        text.text = "Rate: You are growing older at a rate of : " + gain.ToString("F1") +" per tick";
+        text.color = new Color(0.3137255F, 0.9803922F, 0.4823529F, 1); //green
         }
     }
 }

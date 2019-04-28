@@ -54,9 +54,9 @@ MonoBehaviour:
   tickPeriod: {fileID: 11400000, guid: cfac57b896c35442e9dd8a2a7fda106f, type: 2}
   randomEventProbability: {fileID: 11400000, guid: d8c56bbca499540c08583336d38fa962,
     type: 2}
-  currentAge: {fileID: 11400000, guid: 4d9763002dd36455a9a496b64b178786, type: 2}
-  randomIncomeRate: {fileID: 11400000, guid: e41004c844f0a45bd9d6ce89b6bd0d9f, type: 2}
-  randomOutgoingRate: {fileID: 11400000, guid: 2971ad3e5d2e04960b2af4a67b365904, type: 2}
+  playerAge: {fileID: 11400000, guid: 4d9763002dd36455a9a496b64b178786, type: 2}
+  playerIncome: {fileID: 11400000, guid: 88a4681b8b33d40d89023a3577fb5ea2, type: 2}
+  playerCosts: {fileID: 11400000, guid: f15cb04a1555a43c791d491fef85ef8a, type: 2}
   inflationRate: {fileID: 11400000, guid: 6dea8512395454e128150b025f863541, type: 2}
   randomEventsHolder: {fileID: 11400000, guid: 9b4fceaf8ff554483acbbad78cbd028c, type: 2}
   randomEventNotification: {fileID: 11400000, guid: 258285f662d2840afad1b9f897fa2ca0,

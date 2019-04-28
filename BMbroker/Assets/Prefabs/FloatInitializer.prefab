@@ -20,8 +20,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4173282753240384}
   - component: {fileID: 114741017606556294}
+  - component: {fileID: 114134138917768354}
+  - component: {fileID: 114346333954636084}
   m_Layer: 0
-  m_Name: AgeInitializer
+  m_Name: FloatInitializer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -40,6 +42,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114134138917768354
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1958380983562928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dde6bd8a8812f4a0c852dfc4c8ae280d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  observableFloat: {fileID: 11400000, guid: 88a4681b8b33d40d89023a3577fb5ea2, type: 2}
+  initialValue: 0
+--- !u!114 &114346333954636084
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1958380983562928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dde6bd8a8812f4a0c852dfc4c8ae280d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  observableFloat: {fileID: 11400000, guid: f15cb04a1555a43c791d491fef85ef8a, type: 2}
+  initialValue: 0
 --- !u!114 &114741017606556294
 MonoBehaviour:
   m_ObjectHideFlags: 1

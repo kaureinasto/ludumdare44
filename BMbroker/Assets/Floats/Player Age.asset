@@ -9,6 +9,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f783ed99183b94f4bba4de751fe3f535, type: 3}
-  m_Name: InflationRate
+  m_Name: Player Age
   m_EditorClassIdentifier: 
-  value: 0.0000011951413
+  value: 230.7

@@ -10,8 +10,9 @@ public class Item : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     public Text NameText;
     public Button SellButton;
 
-    public ObservableFloat currentAge;
-    public ObservableFloat tickPeriod;
+    public ObservableFloat playerAge;
+    public ObservableFloat playerIncome;
+    public ObservableFloat playerCosts;
     public ItemDataEvent OnDataHover;
     public Image backgroundImage;
 
@@ -24,17 +25,6 @@ public class Item : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         CountText.text = "0";
         backgroundImage.color = Color.white;
         backgroundImage.CrossFadeAlpha(0.1f, 0f, true);
-        StartCoroutine(TickRoutine());
-    }
-
-    private IEnumerator TickRoutine()
-    {
-        while(true)
-        {
-            currentAge.Add(_itemData.incomingRate * _count);
-            currentAge.Substract(_itemData.outgoingRate * _count);
-            yield return new WaitForSeconds(tickPeriod.Value());
-        }
     }
 
     public void SetItemData(ItemData itemData)
@@ -45,10 +35,11 @@ public class Item : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 
     public void Buy()
     {
-        Debug.Log("Buy " + _itemData.name);
         _count++;
         CountText.text = _count.ToString();
-        currentAge.Substract(_itemData.value);
+        playerAge.Substract(_itemData.value);
+        playerIncome.Add(_itemData.incomingRate);
+        playerCosts.Add(_itemData.outgoingRate);
         SellButton.interactable = true;
     }
 
@@ -56,8 +47,9 @@ public class Item : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     {
         if (_count < 1) return;
 
-        Debug.Log("Sell " + _itemData.name);
-        currentAge.Add(_itemData.value);
+        playerAge.Add(_itemData.value);
+        playerIncome.Substract(_itemData.incomingRate);
+        playerCosts.Substract(_itemData.outgoingRate);
         _count--;
 
         CountText.text = _count.ToString();

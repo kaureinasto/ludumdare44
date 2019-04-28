@@ -5,9 +5,9 @@ public class GameController : MonoBehaviour
 {
     public ObservableFloat tickPeriod;
     public ObservableFloat randomEventProbability;
-    public ObservableFloat currentAge;
-    public ObservableFloat randomIncomeRate;
-    public ObservableFloat randomOutgoingRate;
+    public ObservableFloat playerAge;
+    public ObservableFloat playerIncome;
+    public ObservableFloat playerCosts;
     public ObservableFloat inflationRate;
 
     public RandomEventsHolder randomEventsHolder;
@@ -15,10 +15,20 @@ public class GameController : MonoBehaviour
 
     void Start()
     {
-        randomIncomeRate.Set(0f);
-        randomOutgoingRate.Set(0f);
+        StartCoroutine(AgeRoutine());
         StartCoroutine(RandomEventRoutine());
         StartCoroutine(AnnualInflationRoutine());
+    }
+    
+    private IEnumerator AgeRoutine()
+    {
+        while (true)
+        {
+            this.playerAge.Add(playerIncome.Value());
+            this.playerAge.Substract(playerCosts.Value());
+            
+            yield return new WaitForSeconds(tickPeriod.Value());
+        }
     }
 
     private IEnumerator AnnualInflationRoutine()
@@ -39,20 +49,17 @@ public class GameController : MonoBehaviour
                 RandomEvent random = randomEventsHolder.GetEvent();
                 ProcessRandomEvent(random);
             }
-            
-            this.currentAge.Add(randomIncomeRate.Value());
-            this.currentAge.Substract(randomOutgoingRate.Value());
-
             yield return new WaitForSeconds(tickPeriod.Value());
         }
     }
 
     private void ProcessRandomEvent(RandomEvent random)
     {
-        this.currentAge.Add(random.ageChange);
-        this.randomIncomeRate.Add(random.incomingChange);
-        this.randomOutgoingRate.Add(random.outGoingChange);
+        this.playerAge.Add(random.ageChange);
+        this.playerIncome.Add(random.incomingChange);
+        this.playerCosts.Add(random.outGoingChange);
         this.inflationRate.Add(random.inflationChange);
+        
         randomEventNotification.Fire(new NotificationData(
             random.description, 
             random.incomingChange,

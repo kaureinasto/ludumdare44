@@ -442,8 +442,9 @@ MonoBehaviour:
   CountText: {fileID: 114860242888735316}
   NameText: {fileID: 114741411772104548}
   SellButton: {fileID: 114007091414542104}
-  currentAge: {fileID: 11400000, guid: 4d9763002dd36455a9a496b64b178786, type: 2}
-  tickPeriod: {fileID: 11400000, guid: cfac57b896c35442e9dd8a2a7fda106f, type: 2}
+  playerAge: {fileID: 11400000, guid: 4d9763002dd36455a9a496b64b178786, type: 2}
+  playerIncome: {fileID: 11400000, guid: 88a4681b8b33d40d89023a3577fb5ea2, type: 2}
+  playerCosts: {fileID: 11400000, guid: f15cb04a1555a43c791d491fef85ef8a, type: 2}
   OnDataHover: {fileID: 11400000, guid: 1f8c0ac19d32e45fcbc67e1618c8f67e, type: 2}
   backgroundImage: {fileID: 114911887983011328}
 --- !u!114 &114531964650096272
