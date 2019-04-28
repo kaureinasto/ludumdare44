@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 public class ShowItemData : MonoBehaviour
 {
@@ -24,7 +25,7 @@ public class ShowItemData : MonoBehaviour
     private void Show(ItemData obj)
     {
         nameText.text = obj.name;
-        valueText.text = obj.value.ToString();
+        valueText.text = Math.Round(obj.value/12f, 2) + " years";
         incomeText.text = obj.incomingRate.ToString();
         costsText.text = obj.outgoingRate.ToString();
     }
