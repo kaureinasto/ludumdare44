@@ -14,5 +14,5 @@ MonoBehaviour:
   picture: {fileID: 21300000, guid: e71c81f4879cb48f58f44d526b239560, type: 3}
   name: Mini-Suite
   value: 8
-  incomingRate: 0
+  incomingRate: 10
   outgoingRate: 5
