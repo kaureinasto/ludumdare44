@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -15,7 +15,7 @@ public class ageTextController : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		this.currentAge.text = "You are " + (int)Math.Ceiling(this.age.Value()/12 - 1) + " years old. \n(Equal to " + this.age.Value() + " months)";
+		this.currentAge.text = "Current Age: " + (int)Math.Ceiling(this.age.Value()/12 - 1) + " years old. (Debug: " + this.age.Value() + " months)";
 	}
 
 }

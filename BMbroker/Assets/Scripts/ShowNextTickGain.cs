@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -33,15 +33,15 @@ public class ShowNextTickGain : MonoBehaviour
             sum += ageEffector.GetEffectPerTick();
         }
         if(sum < 0){
-        _text.text = "You are getting younger at a rate of: " + sum.ToString("F1")+ " per tick";
+        _text.text = "Rate: You are getting younger at a rate of: " + sum.ToString("F1")+ " per tick";
         _text.color = new Color(255, 121, 198, 255); //pink
         }
         if(sum == 0){
-        _text.text = "You are not aging :O";
+        _text.text = "Rate: You are not aging :O";
         _text.color = new Color(255, 255, 255, 255); //white
         }
         if(sum > 0){
-        _text.text = "You are growing older at a rate of : " + sum.ToString("F1") +" per tick";
+        _text.text = "Rate: You are growing older at a rate of : " + sum.ToString("F1") +" per tick";
         _text.color = new Color(80, 250, 123, 255); //green
         }
     }
