@@ -986,6 +986,11 @@ Prefab:
       propertyPath: m_FontData.m_MinSize
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114073356307917988, guid: b3c7f16451e874b5ca01971e8f9eca31,
+        type: 2}
+      propertyPath: m_Text
+      value: Hover on properties for info
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114644600934809294, guid: b3c7f16451e874b5ca01971e8f9eca31, type: 2}
     - {fileID: 114977958656392650, guid: b3c7f16451e874b5ca01971e8f9eca31, type: 2}
@@ -1472,6 +1477,7 @@ GameObject:
   - component: {fileID: 1335155563}
   - component: {fileID: 1335155565}
   - component: {fileID: 1335155564}
+  - component: {fileID: 1335155566}
   m_Layer: 5
   m_Name: Handle
   m_TagString: Untagged
@@ -1495,7 +1501,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 20, y: 20}
+  m_SizeDelta: {x: 10, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1335155564
 MonoBehaviour:
@@ -1509,7 +1515,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.2627451, g: 0.28627452, b: 0.4509804, a: 1}
+  m_Color: {r: 1, g: 0.4745098, b: 0.7764706, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1530,6 +1536,20 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1335155562}
+--- !u!114 &1335155566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1335155562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -900027084, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0.15294118, g: 0.16078432, b: 0.20784314, a: 1}
+  m_EffectDistance: {x: 5, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1677699484
 GameObject:
   m_ObjectHideFlags: 0
@@ -1693,7 +1713,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.1764706, g: 0.1882353, b: 0.26666668, a: 1}
+  m_Color: {r: 0.15294118, g: 0.16078432, b: 0.20784314, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
