@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Name: Studio Apartment 12m x 10m
   m_EditorClassIdentifier: 
   picture: {fileID: 21300000, guid: e71c81f4879cb48f58f44d526b239560, type: 3}
+  name: Studio Apartment
   value: 2
   incomingRate: 0
   outgoingRate: 2

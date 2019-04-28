@@ -5,10 +5,10 @@ using UnityEngine.UI;
 
 public class Item : MonoBehaviour, IAgeEffector
 {
-    public Image Image;
     public Text CountText;
+    public Text NameText;
     public Button SellButton;
-    
+
     public ObservableFloat currentAge;
     public ObservableFloat tickPeriod;
 
@@ -35,9 +35,9 @@ public class Item : MonoBehaviour, IAgeEffector
     public void SetItemData(ItemData itemData)
     {
         _itemData = itemData;
-        Image.sprite = _itemData.picture;
+        NameText.text = _itemData.name;
     }
-    
+
     public void Buy()
     {
         Debug.Log("Buy " + _itemData.name);
@@ -46,11 +46,11 @@ public class Item : MonoBehaviour, IAgeEffector
         currentAge.Substract(_itemData.value);
         SellButton.interactable = true;
     }
-    
+
     public void Sell()
     {
         if (_count < 1) return;
-        
+
         Debug.Log("Sell " + _itemData.name);
         currentAge.Add(_itemData.value);
         _count--;
