@@ -52,4 +52,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   observableFloat: {fileID: 11400000, guid: 4d9763002dd36455a9a496b64b178786, type: 2}
-  initialValue: 18
+  initialValue: 216
