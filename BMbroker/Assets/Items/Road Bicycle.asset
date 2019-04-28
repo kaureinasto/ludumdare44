@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Name: Road Bicycle
   m_EditorClassIdentifier: 
   picture: {fileID: 21300000, guid: db4946487b4c84ade93e8f6126f54f79, type: 3}
+  name: Road Bicycle
   value: 6
   incomingRate: 0
   outgoingRate: 2

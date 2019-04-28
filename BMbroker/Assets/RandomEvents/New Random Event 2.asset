@@ -11,7 +11,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f0358d836d864093992cc6fd1a9b6ec, type: 3}
   m_Name: New Random Event 2
   m_EditorClassIdentifier: 
-  description: Shat yourself
-  ageChange: 12
-  incomingChange: 1
-  outGoingChange: 1
+  description: Your country has lost a war and the economy has pretty much collapsed.
+  ageChange: 0
+  incomingChange: 0
+  outGoingChange: 0
+  inflationChange: 100

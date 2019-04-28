@@ -9,9 +9,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8f0358d836d864093992cc6fd1a9b6ec, type: 3}
-  m_Name: New Random Event 9
+  m_Name: New Random Event 0
   m_EditorClassIdentifier: 
   description: Shat yourself
   ageChange: 12
   incomingChange: 1
   outGoingChange: 1
+  inflationChange: 0
