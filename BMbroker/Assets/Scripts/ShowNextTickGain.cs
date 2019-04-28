@@ -32,7 +32,14 @@ public class ShowNextTickGain : MonoBehaviour
         {
             sum += ageEffector.GetEffectPerTick();
         }
-        income.Set(sum);
-        _text.text = "Total effect: " + sum.ToString("F1");
+        if(sum < 0){
+        _text.text = "You are getting younger at a rate of: " + sum.ToString("F1")+ " per tick";
+        }
+        if(sum == 0){
+        _text.text = "You are not aging :O";
+        }
+        if(sum > 0){
+        _text.text = "You are growing older at a rate of : " + sum.ToString("F1") +" per tick";
+        }
     }
 }
