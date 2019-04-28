@@ -10,6 +10,7 @@ public class PopulateShop : MonoBehaviour
 
     private void Start()
     {
+
         foreach (ItemData itemData in itemDatas)
         {
             Item item = GameObject.Instantiate(itemPrefab, transform);
