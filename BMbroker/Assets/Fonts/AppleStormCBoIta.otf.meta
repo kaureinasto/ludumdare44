@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 13dd37af2e0db458fb6ac0250ad36806
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: AppleStorm
+  fontNames:
+  - AppleStorm
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: b5b26e00403bd49209dc925c534ff1b5, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
