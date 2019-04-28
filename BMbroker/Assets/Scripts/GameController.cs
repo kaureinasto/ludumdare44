@@ -11,6 +11,7 @@ public class GameController : MonoBehaviour
     public ObservableFloat inflationRate;
 
     public RandomEventController randomEventController;
+    public NotificationDataEvent randomEventNotification;
 
     void Start()
     {
@@ -36,7 +37,7 @@ public class GameController : MonoBehaviour
             if (randomEventProbability.Value() >= Random.Range(0.00f, 1.00f))
             {
                 RandomEvent random = randomEventController.getEvent();
-                doRandomMath(random);
+                ProcessRandomEvent(random);
             }
             
             this.currentAge.Add(randomIncomeRate.Value());
@@ -46,11 +47,16 @@ public class GameController : MonoBehaviour
         }
     }
 
-    private void doRandomMath(RandomEvent random)
+    private void ProcessRandomEvent(RandomEvent random)
     {
         this.currentAge.Add(random.ageChange);
         this.randomIncomeRate.Add(random.incomingChange);
         this.randomOutgoingRate.Add(random.outGoingChange);
         this.inflationRate.Add(random.inflationChange);
+        randomEventNotification.Fire(new NotificationData(
+            random.description, 
+            random.incomingChange,
+            random.outGoingChange,
+            random.inflationChange));
     }
 }

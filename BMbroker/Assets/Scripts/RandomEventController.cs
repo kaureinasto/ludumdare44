@@ -12,12 +12,4 @@ public class RandomEventController : MonoBehaviour {
 	public RandomEvent getEvent(){
 		return this.eventList[Random.Range(0,this.eventList.Count)];
 	}
-	// Use this for initialization
-	void Start () {
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 }

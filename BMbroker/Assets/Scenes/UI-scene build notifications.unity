@@ -563,6 +563,8 @@ MonoBehaviour:
   randomOutgoingRate: {fileID: 11400000, guid: 2971ad3e5d2e04960b2af4a67b365904, type: 2}
   inflationRate: {fileID: 11400000, guid: 6dea8512395454e128150b025f863541, type: 2}
   randomEventController: {fileID: 731443042}
+  randomEventNotification: {fileID: 11400000, guid: 258285f662d2840afad1b9f897fa2ca0,
+    type: 2}
 --- !u!4 &357611819
 Transform:
   m_ObjectHideFlags: 0
@@ -1106,6 +1108,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventList:
   - {fileID: 11400000, guid: b179f87ff13c64ea4ab223026ae5e7f8, type: 2}
+  - {fileID: 11400000, guid: b179f87ff13c64ea4ab223026ae5e7f8, type: 2}
+  - {fileID: 11400000, guid: 0c6edb8fa09ee41eaa6767e5670b2ea2, type: 2}
+  - {fileID: 11400000, guid: 94954c6edd3484873a77eebc302cc2ef, type: 2}
+  - {fileID: 11400000, guid: 56596531938dd434383247c137b84fc1, type: 2}
+  - {fileID: 11400000, guid: 43233271e8d984c679606ae4b90c9c60, type: 2}
+  - {fileID: 11400000, guid: a9ec6edfb19a04a76b93d43a8ef53043, type: 2}
+  - {fileID: 11400000, guid: c38b158dac1b5445782fca4c03da76a3, type: 2}
+  - {fileID: 11400000, guid: f8cc2f74e71684ae1843577b57681caa, type: 2}
 --- !u!4 &731443043
 Transform:
   m_ObjectHideFlags: 0
