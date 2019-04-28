@@ -7,8 +7,8 @@ public class AudioController : MonoBehaviour {
 	public AudioClip buttonSound;
 	public AudioClip mainLoop;
 	// Use this for initialization
-	void Awake () {
-		source = GetComponent<AudioSource>();
+	void Start () {
+		this.source = GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
