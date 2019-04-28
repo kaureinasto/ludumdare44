@@ -8,7 +8,8 @@ public class ShowNextTickGain : MonoBehaviour
 {
     private Text _text;
     private List<IAgeEffector> ageEffectors = new List<IAgeEffector>();
-
+    
+    public ObservableFloat income;
     private void Start()
     {
         _text = GetComponent<Text>();
@@ -31,7 +32,7 @@ public class ShowNextTickGain : MonoBehaviour
         {
             sum += ageEffector.GetEffectPerTick();
         }
-
+        income.Set(sum);
         _text.text = "Total effect: " + sum.ToString("F1");
     }
 }
