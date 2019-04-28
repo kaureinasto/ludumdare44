@@ -14,7 +14,6 @@ public class Notification : MonoBehaviour
     
     public void Destroy()
     {
-        transform.parent = transform.parent.parent;
         GetComponent<Animator>().SetBool("close", true);
         Destroy(gameObject, 0.5f);
     }
