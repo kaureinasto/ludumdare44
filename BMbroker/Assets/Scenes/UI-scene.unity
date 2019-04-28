@@ -892,17 +892,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventList:
   - {fileID: 11400000, guid: b179f87ff13c64ea4ab223026ae5e7f8, type: 2}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!4 &731443043
 Transform:
   m_ObjectHideFlags: 0
