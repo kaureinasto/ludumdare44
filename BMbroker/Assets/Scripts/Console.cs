@@ -22,9 +22,9 @@ public class Console : MonoBehaviour
     {
         Notification notification = GameObject.Instantiate(notificationPrefab, transform).GetComponent<Notification>();
         notification.infoText.text = o.text;
-        notification.incomeText.text = o.incomeChange.ToString("+0.0; -0.0; 0");
-        notification.outgoingText.text = o.costsChange.ToString("+0.0; -0.0; 0");
-        notification.inflationText.text = o.inflationChange.ToString("+0.0; -0.0; 0");
+        notification.incomeText.text = o.incomeChange.ToString("+0.0; -0.0; 0") + " monthly";
+        notification.outgoingText.text = o.costsChange.ToString("+0.0; -0.0; 0") + " monthly";
+        notification.inflationText.text = o.inflationChange.ToString("+0.0; -0.0; 0") + " inflation change";
         notification.console = this;
         ScheduleNextDestroy();
     }
