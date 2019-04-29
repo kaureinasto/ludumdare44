@@ -13,12 +13,18 @@ public class GameController : MonoBehaviour
     public RandomEventsHolder randomEventsHolder;
     public NotificationDataEvent randomEventNotification;
 
+    public GameSpawner gameSpawner;
     void Start()
-    {
+    {   
+        playerAge.Set(216);
+        playerIncome.Set(1);
+        playerCosts.Set(0);
         StartCoroutine(AgeRoutine());
         StartCoroutine(RandomEventRoutine());
         StartCoroutine(AnnualInflationRoutine());
+        StartCoroutine(CheckLosingRoutine());
     }
+    
     
     private IEnumerator AgeRoutine()
     {
@@ -30,7 +36,15 @@ public class GameController : MonoBehaviour
             yield return new WaitForSeconds(tickPeriod.Value());
         }
     }
-
+    private IEnumerator CheckLosingRoutine(){
+        while (true){
+            if( playerAge.Value() < 0 || playerAge.Value() > 1200){
+                GameOver();
+                Debug.Log("You Lose");
+            }
+            yield return new WaitForSeconds(tickPeriod.Value()/30);
+        }
+    }
     private IEnumerator AnnualInflationRoutine()
     {
         while (true)
@@ -52,7 +66,10 @@ public class GameController : MonoBehaviour
             yield return new WaitForSeconds(tickPeriod.Value());
         }
     }
-
+    private void GameOver(){
+        StopAllCoroutines();
+        gameSpawner.destroyGame();
+    }
     private void ProcessRandomEvent(RandomEvent random)
     {
         this.playerAge.Add(random.ageChange);
