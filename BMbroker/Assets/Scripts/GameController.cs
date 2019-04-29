@@ -16,9 +16,6 @@ public class GameController : MonoBehaviour
     public GameSpawner gameSpawner;
     void Start()
     {   
-        playerAge.Set(216);
-        playerIncome.Set(1);
-        playerCosts.Set(0);
         StartCoroutine(AgeRoutine());
         StartCoroutine(RandomEventRoutine());
         StartCoroutine(AnnualInflationRoutine());
@@ -69,6 +66,17 @@ public class GameController : MonoBehaviour
     private void GameOver(){
         StopAllCoroutines();
         gameSpawner.destroyGame();
+    }
+    public void SetDefaultValues(){
+        playerAge.Set(216.0f);
+        playerIncome.Set(1.0f);
+        playerCosts.Set(0.0f);
+    }
+    public void SetTurboValues(){
+        playerAge.Set(216f);
+        playerIncome.Set(1.1f);
+        playerCosts.Set(0.1f);
+        tickPeriod.Set(0.1f);
     }
     private void ProcessRandomEvent(RandomEvent random)
     {

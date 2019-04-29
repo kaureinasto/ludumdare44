@@ -5,13 +5,20 @@ using UnityEngine;
 public class GameSpawner : MonoBehaviour {
 
 
-	public GameObject game;
-	private GameObject currentGame;
+	public GameInstance game;
+	private GameInstance currentGame;
 	public GameObject endGameScreen;
 	
 	public void spawnNormalGame()
 	{
 		this.currentGame = Instantiate(game);
+		currentGame.gameController.SetDefaultValues();
+		currentGame.SetActive(true);
+	}
+
+	public void spawnTurboGame(){
+		this.currentGame = Instantiate(game);
+		currentGame.gameController.SetTurboValues();
 		currentGame.SetActive(true);
 	}
 
