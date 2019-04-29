@@ -9,5 +9,5 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4449bd5ece62e4b3ca84361588929dd3, type: 3}
-  m_Name: Ascended Event
+  m_Name: Start Ascend Event
   m_EditorClassIdentifier: 
