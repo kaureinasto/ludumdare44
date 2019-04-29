@@ -68,6 +68,7 @@ public class GameController : MonoBehaviour
         StopAllCoroutines();
         gameSpawner.destroyGame();
     }
+
     public void SetDefaultValues(){
         playerAge.Set(216.0f);
         playerIncome.Set(1.0f);
