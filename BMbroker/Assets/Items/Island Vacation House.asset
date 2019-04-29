@@ -11,8 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ddef62b58cf9445abc9256ac3f4097e, type: 3}
   m_Name: Island Vacation House
   m_EditorClassIdentifier: 
-  picture: {fileID: 21300000, guid: e71c81f4879cb48f58f44d526b239560, type: 3}
-  name: Island Vacation House
+  name: Tiny Island
   value: 450
   incomingRate: 240
   outgoingRate: 120

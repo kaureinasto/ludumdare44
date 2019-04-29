@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ddef62b58cf9445abc9256ac3f4097e, type: 3}
   m_Name: Couch at a friend's place
   m_EditorClassIdentifier: 
-  name: Couch at a friend's place
+  name: Friend's Couch
   value: 30
   incomingRate: 2
   outgoingRate: 1

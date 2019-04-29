@@ -11,8 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ddef62b58cf9445abc9256ac3f4097e, type: 3}
   m_Name: Bicycle
   m_EditorClassIdentifier: 
-  picture: {fileID: 21300000, guid: e4bd0dd2ca4434d6da03d16e99a51ece, type: 3}
-  name: Bicycle
+  name: Grandpa's Bicycle
   value: 1
   incomingRate: 0
   outgoingRate: 1
