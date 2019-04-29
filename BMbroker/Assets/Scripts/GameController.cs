@@ -57,16 +57,6 @@ public class GameController : MonoBehaviour
     }
     private IEnumerator CheckLosingRoutine(){
         while (true){
-            if( playerAge.Value() < 0 || playerAge.Value() > 1200) {
-                StopCoroutine(RandomEventRoutine());
-                StopCoroutine(aging);
-                StopCoroutine(random);
-                StopCoroutine(dateincrementor);                
-                yield return new WaitForSeconds(4);
-                StopAllCoroutines();
-                gameSpawner.destroyGame();
-                Debug.Log("You Lose");
-            }
             if( ascended ) {
                 ascendTrigger.Fire();
                 StopCoroutine(RandomEventRoutine());
@@ -78,6 +68,18 @@ public class GameController : MonoBehaviour
                 gameSpawner.destroyGame();
                 Debug.Log("You Lose, because you killed yourself");
             } 
+
+            if( playerAge.Value() < 0 || playerAge.Value() > 1200) {
+                StopCoroutine(RandomEventRoutine());
+                StopCoroutine(aging);
+                StopCoroutine(random);
+                StopCoroutine(dateincrementor);                
+                yield return new WaitForSeconds(4);
+                StopAllCoroutines();
+                gameSpawner.destroyGame();
+                Debug.Log("You Lose");
+            }
+
             yield return new WaitForSeconds(tickPeriod.Value()/30);
         }
     }
@@ -97,7 +99,7 @@ public class GameController : MonoBehaviour
             return "You ascend and are reborn as a horse. "+ yourScoreWas(score);
         }
         if(score < 300*balancefactor){
-            return "You ascend and are reborn as a pokemon. "+ yourScoreWas(score);
+            return "You ascend and are reborn as a pokemon. More specifically, a Magicarp. A life of splashing around awaits you. "+ yourScoreWas(score);
         }
         if(score < 400*balancefactor){
             return "You ascend and are reborn as a Jerry Lee Lewis. "+ yourScoreWas(score);
@@ -106,21 +108,27 @@ public class GameController : MonoBehaviour
             return "You ascend and are reborn as a Cartman. "+ yourScoreWas(score);
         }
         if(score < 600*balancefactor){
-            return "You ascend and are reborn in an alternate universe as a crack-addicted George W. Bush. "+ yourScoreWas(score);
+            return "You ascend and are reborn in an alternate universe as a crack-addicted George W. Bush. Too bad you're not president anymore. "+ yourScoreWas(score);
         }
         if(score < 700*balancefactor){
-            return "You ascend find yourself walking the streets as a Homer Simpson. "+ yourScoreWas(score);
+            return "You ascend find yourself walking the streets as a Homer Simpson. D'oh! "+ yourScoreWas(score);
         }
         if(score < 800*balancefactor){
-            return "You ascend and are reborn as a Harry Potter. "+ yourScoreWas(score);
+            return "You ascend and reincarnate in to the body of Harry Potter, right as he is about to kiss Draco Malfoy. "+ yourScoreWas(score);
         }
         if(score < 900*balancefactor){
             return "You ascend and are reborn as a regular dude, tough shit. "+ yourScoreWas(score);
         }
-        if(score < 1000*balancefactor){
-            return "You ascend and are reborn as a Rick bitch, wubbalubbadubduub. "+ yourScoreWas(score);
+        if(score < 933*balancefactor){
+            return "You ascend to find yourself transformed into Daenerys Targaryen, ruler of the Seven Kingdoms. Get ready for all that incest . "+ yourScoreWas(score);
         }
-        return "You ascend and are reborn as a cockroach. " + yourScoreWas(score);
+        if(score < 1000*balancefactor){
+            return "You ascend and are reborn as a Rick, bitch, wubbalubbadubduub. "+ yourScoreWas(score);
+        }
+        if(score < 1200*balancefactor){
+            return "You ascend and are reborn as a thousand year old tree. Get ready to grow!!!"+ yourScoreWas(score);
+        }
+        return "You ascend and are reborn as a insect, tough break. " + yourScoreWas(score);
     }
     private string yourScoreWas(float score){
         return "Your score was " + score.ToString() +" .";
