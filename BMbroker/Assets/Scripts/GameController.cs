@@ -99,7 +99,7 @@ public class GameController : MonoBehaviour
             return "You ascend and are reborn as a horse. "+ yourScoreWas(score);
         }
         if(score < 300*balancefactor){
-            return "You ascend and are reborn as a pokemon. More specifically, a Magicarp. A life of splashing around awaits you. "+ yourScoreWas(score);
+            return "You ascend and are reborn as a pokemon. More specifically, a Magicarp. A life of splashing awaits you. "+ yourScoreWas(score);
         }
         if(score < 400*balancefactor){
             return "You ascend and are reborn as a Jerry Lee Lewis. "+ yourScoreWas(score);
@@ -111,10 +111,10 @@ public class GameController : MonoBehaviour
             return "You ascend and are reborn in an alternate universe as a crack-addicted George W. Bush. Too bad you're not president anymore. "+ yourScoreWas(score);
         }
         if(score < 700*balancefactor){
-            return "You ascend find yourself walking the streets as a Homer Simpson. D'oh! "+ yourScoreWas(score);
+            return "You ascend find yourself to walking the streets as a Homer Simpson. D'oh! "+ yourScoreWas(score);
         }
         if(score < 800*balancefactor){
-            return "You ascend and reincarnate in to the body of Harry Potter, right as he is about to kiss Draco Malfoy. "+ yourScoreWas(score);
+            return "You ascend and reincarnate into the body of Harry Potter, right as he is about to kiss Draco Malfoy. "+ yourScoreWas(score);
         }
         if(score < 900*balancefactor){
             return "You ascend and are reborn as a regular dude, tough shit. "+ yourScoreWas(score);
