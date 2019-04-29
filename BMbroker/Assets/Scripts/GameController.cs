@@ -53,7 +53,7 @@ public class GameController : MonoBehaviour
     }
     private IEnumerator CheckLosingRoutine(){
         while (true){
-            if( playerAge.Value() < 0 || playerAge.Value() > 1200){
+            if( playerAge.Value() < 0 || playerAge.Value() > 1200 ) {
                 StopCoroutine(RandomEventRoutine());
                 StopCoroutine(aging);
                 StopCoroutine(random);
@@ -63,19 +63,53 @@ public class GameController : MonoBehaviour
                 gameSpawner.destroyGame();
                 Debug.Log("You Lose");
             }
+            /* if( AscendAnimationEnd ) {
+                ascended = true;
+                StopCoroutine(RandomEventRoutine());
+                StopCoroutine(aging);
+                StopCoroutine(random);
+                StopCoroutine(dateincrementor);                
+                yield return new WaitForSeconds(4);
+                StopAllCoroutines();
+                gameSpawner.destroyGame();
+                Debug.Log("You Lose, because you killed yourself");
+            } */
             yield return new WaitForSeconds(tickPeriod.Value()/30);
         }
     }
     public string getAscendScoreString(){
-            
+        if(score < 5){
+            return "You ascend and are reborn as a stock broker. "+ yourScoreWas(score);
+        }            
         if(score < 10){
-            return "You ascend and are reborn as a fly. "+ yourScoreWas(score);
+            return "You ascend and are reborn as a cockroach. "+ yourScoreWas(score);
         }
         if(score < 200){
             return "You ascend and are reborn as a horse. "+ yourScoreWas(score);
         }
         if(score < 300){
-            return "You ascend and are reborn as a horse. "+ yourScoreWas(score);
+            return "You ascend and are reborn as a pokemon. "+ yourScoreWas(score);
+        }
+        if(score < 400){
+            return "You ascend and are reborn as a Jerry Lee Lewis. "+ yourScoreWas(score);
+        }
+        if(score < 500){
+            return "You ascend and are reborn as a Cartman. "+ yourScoreWas(score);
+        }
+        if(score < 600){
+            return "You ascend and are reborn in an alternate universe as a crack-addicted George W. Bush. "+ yourScoreWas(score);
+        }
+        if(score < 700){
+            return "You ascend and are reborn as a Homer Simpson. "+ yourScoreWas(score);
+        }
+        if(score < 800){
+            return "You ascend and are reborn as a Harry Potter. "+ yourScoreWas(score);
+        }
+        if(score < 900){
+            return "You ascend and are reborn as a regular dude, tough shit. "+ yourScoreWas(score);
+        }
+        if(score < 900){
+            return "You ascend and are reborn as a Rick bitch, wubbalubbadubduub. "+ yourScoreWas(score);
         }
         return "You ascend and are reborn as a cockroach. " + yourScoreWas(score);
     }
@@ -110,6 +144,7 @@ public class GameController : MonoBehaviour
         playerIncome.Set(1.0f);
         playerCosts.Set(0.0f);
         tickPeriod.Set(5);
+        ascended = false;
     }
     public void SetTurboValues(){
         playerAge.Set(216f);
@@ -117,7 +152,7 @@ public class GameController : MonoBehaviour
         playerCosts.Set(0.1f);
         tickPeriod.Set(0.33f);
         maingameMusic.pitch = 2f;
-
+        ascended = false;
     }
     public string getDeathStats(){
         string yearslasted = "You lasted " + currentDate.getYearsLasted() + " years. ";
