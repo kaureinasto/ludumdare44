@@ -10,7 +10,7 @@ public class GameController : MonoBehaviour
     public ObservableFloat playerCosts;
     public ObservableFloat inflationRate;
     public ObservableDate currentDate;
-
+    
     public RandomEventsHolder randomEventsHolder;
     public NotificationDataEvent randomEventNotification;
 
@@ -19,6 +19,8 @@ public class GameController : MonoBehaviour
     private Coroutine aging;
     private Coroutine random;
     private Coroutine dateincrementor;
+    
+    private float score;
     
     void Start()
     {
@@ -42,6 +44,7 @@ public class GameController : MonoBehaviour
         while (true)
         {
             this.playerAge.Add(playerIncome.Value());
+            this.score+=playerIncome.Value();
             this.playerAge.Substract(playerCosts.Value());
 
             yield return new WaitForSeconds(tickPeriod.Value());
@@ -61,6 +64,22 @@ public class GameController : MonoBehaviour
             }
             yield return new WaitForSeconds(tickPeriod.Value()/30);
         }
+    }
+    public string printScoreString(){
+            
+        if(score < 100){
+            return "You ascend and are reborn as a fly. ";
+        }
+        if(score < 200){
+            return "You ascend and are reborn as a horse. ";
+        }
+        if(score < 300){
+            return "You ascend and are reborn as a horse. ";
+        }
+        return "You ascend and are reborn as a cockroach. ";
+    }
+    private string yourScoreWas(float score){
+        return "Your score was " + score.ToString() +" .";
     }
     private IEnumerator AnnualInflationRoutine()
     {
@@ -102,9 +121,9 @@ public class GameController : MonoBehaviour
 
     }
     public string getStats(){
-        string yearslasted = "You lasted " + currentDate.getYearsLasted() + " years";
+        string yearslasted = "You lasted " + currentDate.getYearsLasted() + " years. ";
         Debug.Log(yearslasted);
-        return yearslasted;
+        return yearslasted + yourScoreWas(score) + printScoreString();
     }
     private void ProcessRandomEvent(RandomEvent random)
     {
