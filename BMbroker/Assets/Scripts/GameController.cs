@@ -100,7 +100,7 @@ public class GameController : MonoBehaviour
             return "You ascend and are reborn in an alternate universe as a crack-addicted George W. Bush. "+ yourScoreWas(score);
         }
         if(score < 700){
-            return "You ascend and are reborn as a Homer Simpson. "+ yourScoreWas(score);
+            return "You ascend find yourself walking the streets as a Homer Simpson. "+ yourScoreWas(score);
         }
         if(score < 800){
             return "You ascend and are reborn as a Harry Potter. "+ yourScoreWas(score);
@@ -108,7 +108,7 @@ public class GameController : MonoBehaviour
         if(score < 900){
             return "You ascend and are reborn as a regular dude, tough shit. "+ yourScoreWas(score);
         }
-        if(score < 900){
+        if(score < 1000){
             return "You ascend and are reborn as a Rick bitch, wubbalubbadubduub. "+ yourScoreWas(score);
         }
         return "You ascend and are reborn as a cockroach. " + yourScoreWas(score);
