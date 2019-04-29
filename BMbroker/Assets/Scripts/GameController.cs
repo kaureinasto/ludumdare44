@@ -21,7 +21,7 @@ public class GameController : MonoBehaviour
     private Coroutine dateincrementor;
     
     private float score;
-    public bool ascended;
+    public bool ascended = false;
 
     void Start()
     {
@@ -124,7 +124,7 @@ public class GameController : MonoBehaviour
         if(ascended){
             return yearslasted + getAscendScoreString();
         }
-        return yearslasted + yourScoreWas(score);
+        return "You died like a noob. " + yearslasted + yourScoreWas(score);
     }
     private void ProcessRandomEvent(RandomEvent random)
     {
