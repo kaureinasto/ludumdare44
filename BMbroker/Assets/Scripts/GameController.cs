@@ -16,10 +16,14 @@ public class GameController : MonoBehaviour
 
     public GameSpawner gameSpawner;
     public AudioSource maingameMusic;
+    public SimpleEvent ascendTrigger;
+
     private Coroutine aging;
     private Coroutine random;
     private Coroutine dateincrementor;
     
+    
+
     private float score;
     public bool ascended = false;
 
@@ -53,7 +57,7 @@ public class GameController : MonoBehaviour
     }
     private IEnumerator CheckLosingRoutine(){
         while (true){
-            if( playerAge.Value() < 0 || playerAge.Value() > 1200 ) {
+            if( playerAge.Value() < 0 || playerAge.Value() > 1200) {
                 StopCoroutine(RandomEventRoutine());
                 StopCoroutine(aging);
                 StopCoroutine(random);
@@ -63,8 +67,8 @@ public class GameController : MonoBehaviour
                 gameSpawner.destroyGame();
                 Debug.Log("You Lose");
             }
-            /* if( AscendAnimationEnd ) {
-                ascended = true;
+            if( ascended ) {
+                ascendTrigger.Fire();
                 StopCoroutine(RandomEventRoutine());
                 StopCoroutine(aging);
                 StopCoroutine(random);
@@ -73,12 +77,16 @@ public class GameController : MonoBehaviour
                 StopAllCoroutines();
                 gameSpawner.destroyGame();
                 Debug.Log("You Lose, because you killed yourself");
-            } */
+            } 
             yield return new WaitForSeconds(tickPeriod.Value()/30);
         }
     }
+
+    public void setAscended(bool value){
+        ascended = value;
+    }
     public string getAscendScoreString(){
-        int balancefactor = 2;
+        int balancefactor = 3;
         if(score < 5*balancefactor){
             return "You ascend and are reborn as a stock broker. "+ yourScoreWas(score);
         }            
@@ -145,7 +153,6 @@ public class GameController : MonoBehaviour
         playerIncome.Set(1.0f);
         playerCosts.Set(0.0f);
         tickPeriod.Set(5);
-        ascended = false;
     }
     public void SetTurboValues(){
         playerAge.Set(216f);
@@ -153,8 +160,9 @@ public class GameController : MonoBehaviour
         playerCosts.Set(0.1f);
         tickPeriod.Set(0.33f);
         maingameMusic.pitch = 2f;
-        ascended = false;
     }
+     
+
     public string getDeathStats(){
         string yearslasted = "You lasted " + currentDate.getYearsLasted() + " years. ";
         if(ascended){
