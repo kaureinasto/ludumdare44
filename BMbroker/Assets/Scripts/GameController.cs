@@ -14,6 +14,7 @@ public class GameController : MonoBehaviour
     public NotificationDataEvent randomEventNotification;
 
     public GameSpawner gameSpawner;
+    public AudioSource maingameMusic;
     void Start()
     {   
         StartCoroutine(AgeRoutine());
@@ -76,8 +77,11 @@ public class GameController : MonoBehaviour
         playerAge.Set(216f);
         playerIncome.Set(1.1f);
         playerCosts.Set(0.1f);
-        tickPeriod.Set(0.1f);
+        tickPeriod.Set(0.33f);
+        maingameMusic.pitch = 2f;
+        
     }
+   
     private void ProcessRandomEvent(RandomEvent random)
     {
         this.playerAge.Add(random.ageChange);

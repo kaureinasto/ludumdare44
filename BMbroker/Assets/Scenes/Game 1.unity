@@ -2464,6 +2464,11 @@ Prefab:
       propertyPath: gameSpawner
       value: 
       objectReference: {fileID: 1217294914}
+    - target: {fileID: 114471978050572576, guid: 480bf53cd28e4445890d15afb29090c1,
+        type: 2}
+      propertyPath: maingameMusic
+      value: 
+      objectReference: {fileID: 71785158}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 480bf53cd28e4445890d15afb29090c1, type: 2}
   m_IsPrefabParent: 0
