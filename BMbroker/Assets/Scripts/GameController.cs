@@ -16,21 +16,22 @@ public class GameController : MonoBehaviour
 
     public GameSpawner gameSpawner;
     public AudioSource maingameMusic;
+    
     void Start()
     {
         StartCoroutine(AgeRoutine());
         StartCoroutine(RandomEventRoutine());
         StartCoroutine(AnnualInflationRoutine());
         StartCoroutine(CheckLosingRoutine());
-        StartCoroutine(AdvanceGameDate());
+        StartCoroutine(AdvanceGameDay());
     }
 
-    private IEnumerator AdvanceGameDate(){
+    private IEnumerator AdvanceGameDay(){
       while (true)
       {
-          this.currentDate.AddMonths(1);
+          this.currentDate.AddDays(1);
 
-          yield return new WaitForSeconds(tickPeriod.Value());
+          yield return new WaitForSeconds(tickPeriod.Value()/30);
       }
     }
     private IEnumerator AgeRoutine()
@@ -82,6 +83,7 @@ public class GameController : MonoBehaviour
         playerAge.Set(216.0f);
         playerIncome.Set(1.0f);
         playerCosts.Set(0.0f);
+        tickPeriod.Set(5);
     }
     public void SetTurboValues(){
         playerAge.Set(216f);
@@ -91,7 +93,11 @@ public class GameController : MonoBehaviour
         maingameMusic.pitch = 2f;
 
     }
-
+    public string getStats(){
+        string yearslasted = "You lasted " + currentDate.getYearsLasted() + " years";
+        Debug.Log(yearslasted);
+        return yearslasted;
+    }
     private void ProcessRandomEvent(RandomEvent random)
     {
         this.playerAge.Add(random.ageChange);
