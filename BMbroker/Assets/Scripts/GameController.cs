@@ -16,14 +16,17 @@ public class GameController : MonoBehaviour
 
     public GameSpawner gameSpawner;
     public AudioSource maingameMusic;
+    private Coroutine aging;
+    private Coroutine random;
+    private Coroutine dateincrementor;
     
     void Start()
     {
-        StartCoroutine(AgeRoutine());
-        StartCoroutine(RandomEventRoutine());
+        aging = StartCoroutine(AgeRoutine());
+        random = StartCoroutine(RandomEventRoutine());
         StartCoroutine(AnnualInflationRoutine());
         StartCoroutine(CheckLosingRoutine());
-        StartCoroutine(AdvanceGameDay());
+        dateincrementor = StartCoroutine(AdvanceGameDay());
     }
 
     private IEnumerator AdvanceGameDay(){
@@ -47,7 +50,13 @@ public class GameController : MonoBehaviour
     private IEnumerator CheckLosingRoutine(){
         while (true){
             if( playerAge.Value() < 0 || playerAge.Value() > 1200){
-                GameOver();
+                StopCoroutine(RandomEventRoutine());
+                StopCoroutine(aging);
+                StopCoroutine(random);
+                StopCoroutine(dateincrementor);                
+                yield return new WaitForSeconds(4);
+                StopAllCoroutines();
+                gameSpawner.destroyGame();
                 Debug.Log("You Lose");
             }
             yield return new WaitForSeconds(tickPeriod.Value()/30);
@@ -75,8 +84,7 @@ public class GameController : MonoBehaviour
         }
     }
     private void GameOver(){
-        StopAllCoroutines();
-        gameSpawner.destroyGame();
+
     }
 
     public void SetDefaultValues(){
