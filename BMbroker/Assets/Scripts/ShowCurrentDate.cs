@@ -13,6 +13,6 @@ public class ShowCurrentDate : MonoBehaviour
   }
 
   void Update() {
-    this.currentDateText.text = "Current Date: " + this.currentDate.Value().ToString();
+    this.currentDateText.text = "Current Date: " + this.currentDate.Value().ToString("yyyy-MM");
   }
 }

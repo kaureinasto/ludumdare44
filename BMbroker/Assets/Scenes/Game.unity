@@ -1914,6 +1914,12 @@ Prefab:
       propertyPath: m_Name
       value: GameController
       objectReference: {fileID: 0}
+    - target: {fileID: 114471978050572576, guid: 480bf53cd28e4445890d15afb29090c1,
+        type: 2}
+      propertyPath: currentDate
+      value: 
+      objectReference: {fileID: 11400000, guid: 2a476d580aeb3415ba061aa3f723c35e,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 480bf53cd28e4445890d15afb29090c1, type: 2}
   m_IsPrefabParent: 0
@@ -2297,6 +2303,7 @@ GameObject:
   - component: {fileID: 1910135622}
   - component: {fileID: 1910135624}
   - component: {fileID: 1910135623}
+  - component: {fileID: 1910135625}
   m_Layer: 5
   m_Name: Current Date - Text
   m_TagString: Untagged
@@ -2354,13 +2361,26 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Current date: 2019-04-29'
+  m_Text: 'Current date: 2019-04'
 --- !u!222 &1910135624
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1910135621}
+--- !u!114 &1910135625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1910135621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc803dc6091fa41999de274806acf4f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentDateText: {fileID: 1910135623}
+  currentDate: {fileID: 11400000, guid: 2a476d580aeb3415ba061aa3f723c35e, type: 2}
 --- !u!224 &1941919240 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 224052832127893220, guid: 3bb160c9b24624d898eac9ef10c040d2,
