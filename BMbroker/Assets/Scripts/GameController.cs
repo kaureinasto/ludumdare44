@@ -88,7 +88,7 @@ public class GameController : MonoBehaviour
         ascended = value;
     }
     public string getAscendScoreString(){
-        int balancefactor = 3;
+        int balancefactor = 6;
         if(score < 5*balancefactor){
             return "You ascend and are reborn as a stock broker. "+ yourScoreWas(score);
         }            
@@ -96,7 +96,7 @@ public class GameController : MonoBehaviour
             return "You ascend and are reborn as a cockroach. "+ yourScoreWas(score);
         }
         if(score < 200*balancefactor){
-            return "You ascend and are reborn as a horse. "+ yourScoreWas(score);
+            return "You ascend and are reborn as a prostitute. "+ yourScoreWas(score);
         }
         if(score < 300*balancefactor){
             return "You ascend and are reborn as a pokemon. More specifically, a Magicarp. A life of splashing awaits you. "+ yourScoreWas(score);
