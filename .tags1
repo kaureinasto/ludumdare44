@@ -4,9 +4,8 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.9~svn20110310	//
-RandomEvent	/home/k/code/ludumdare44/BMbroker/Assets/Scripts/RandomEvent.cs	/^public class RandomEvent : ScriptableObject {$/;"	class	line:4
-description	/home/k/code/ludumdare44/BMbroker/Assets/Scripts/RandomEvent.cs	/^	public string description;$/;"	field	line:6	class:RandomEvent
-ageChange	/home/k/code/ludumdare44/BMbroker/Assets/Scripts/RandomEvent.cs	/^	public float ageChange;$/;"	field	line:7	class:RandomEvent
-incomingChange	/home/k/code/ludumdare44/BMbroker/Assets/Scripts/RandomEvent.cs	/^	public float incomingChange;$/;"	field	line:8	class:RandomEvent
-outGoingChange	/home/k/code/ludumdare44/BMbroker/Assets/Scripts/RandomEvent.cs	/^	public float outGoingChange;$/;"	field	line:9	class:RandomEvent
-inflationChange	/home/k/code/ludumdare44/BMbroker/Assets/Scripts/RandomEvent.cs	/^	public float inflationChange;$/;"	field	line:11	class:RandomEvent
+ShowCurrentDate	/home/k/code/ludumdare44/BMbroker/Assets/Scripts/ShowCurrentDate.cs	/^public class ShowCurrentDate : MonoBehaviour$/;"	class	line:5
+currentDateText	/home/k/code/ludumdare44/BMbroker/Assets/Scripts/ShowCurrentDate.cs	/^  public Text currentDateText;$/;"	field	line:7	class:ShowCurrentDate
+currentDate	/home/k/code/ludumdare44/BMbroker/Assets/Scripts/ShowCurrentDate.cs	/^  public ObservableDate currentDate;$/;"	field	line:8	class:ShowCurrentDate
+Start	/home/k/code/ludumdare44/BMbroker/Assets/Scripts/ShowCurrentDate.cs	/^  void Start() {$/;"	method	line:10	class:ShowCurrentDate	file:	signature:()
+Update	/home/k/code/ludumdare44/BMbroker/Assets/Scripts/ShowCurrentDate.cs	/^  void Update() {$/;"	method	line:15	class:ShowCurrentDate	file:	signature:()

@@ -4,3 +4,40 @@ ageChange	/home/k/code/ludumdare44/BMbroker/Assets/Scripts/RandomEvent.cs	/^	pub
 incomingChange	/home/k/code/ludumdare44/BMbroker/Assets/Scripts/RandomEvent.cs	/^	public float incomingChange;$/;"	field	line:8	class:RandomEvent
 outGoingChange	/home/k/code/ludumdare44/BMbroker/Assets/Scripts/RandomEvent.cs	/^	public float outGoingChange;$/;"	field	line:9	class:RandomEvent
 inflationChange	/home/k/code/ludumdare44/BMbroker/Assets/Scripts/RandomEvent.cs	/^	public float inflationChange;$/;"	field	line:11	class:RandomEvent
+ObservableDateInitializer	/home/k/code/ludumdare44/BMbroker/Assets/Scripts/ObservableDateInitializer.cs	/^public class ObservableDateInitializer : MonoBehaviour$/;"	class	line:7
+observableDate	/home/k/code/ludumdare44/BMbroker/Assets/Scripts/ObservableDateInitializer.cs	/^    public ObservableDate observableDate;$/;"	field	line:9	class:ObservableDateInitializer
+initialValue	/home/k/code/ludumdare44/BMbroker/Assets/Scripts/ObservableDateInitializer.cs	/^    public DateTime initialValue;$/;"	field	line:10	class:ObservableDateInitializer
+Start	/home/k/code/ludumdare44/BMbroker/Assets/Scripts/ObservableDateInitializer.cs	/^    private void Start()$/;"	method	line:12	class:ObservableDateInitializer	file:	signature:()
+ObservableDate	/home/k/code/ludumdare44/BMbroker/Assets/Scripts/ObservableDate.cs	/^public class ObservableDate : ScriptableObject$/;"	class	line:5
+value	/home/k/code/ludumdare44/BMbroker/Assets/Scripts/ObservableDate.cs	/^    private DateTime value = DateTime.Now;$/;"	field	line:8	class:ObservableDate	file:
+OnChanged	/home/k/code/ludumdare44/BMbroker/Assets/Scripts/ObservableDate.cs	/^    public event Action<DateTime> OnChanged;$/;"	event	line:9	class:ObservableDate
+Set	/home/k/code/ludumdare44/BMbroker/Assets/Scripts/ObservableDate.cs	/^    public void Set(DateTime newValue)$/;"	method	line:11	class:ObservableDate	signature:(DateTime newValue)
+AddMonths	/home/k/code/ludumdare44/BMbroker/Assets/Scripts/ObservableDate.cs	/^    public void AddMonths(int amount)$/;"	method	line:20	class:ObservableDate	signature:(int amount)
+Value	/home/k/code/ludumdare44/BMbroker/Assets/Scripts/ObservableDate.cs	/^    public DateTime Value()$/;"	method	line:25	class:ObservableDate	signature:()
+GameController	/home/k/code/ludumdare44/BMbroker/Assets/Scripts/GameController.cs	/^public class GameController : MonoBehaviour$/;"	class	line:4
+tickPeriod	/home/k/code/ludumdare44/BMbroker/Assets/Scripts/GameController.cs	/^    public ObservableFloat tickPeriod;$/;"	field	line:6	class:GameController
+randomEventProbability	/home/k/code/ludumdare44/BMbroker/Assets/Scripts/GameController.cs	/^    public ObservableFloat randomEventProbability;$/;"	field	line:7	class:GameController
+playerAge	/home/k/code/ludumdare44/BMbroker/Assets/Scripts/GameController.cs	/^    public ObservableFloat playerAge;$/;"	field	line:8	class:GameController
+playerIncome	/home/k/code/ludumdare44/BMbroker/Assets/Scripts/GameController.cs	/^    public ObservableFloat playerIncome;$/;"	field	line:9	class:GameController
+playerCosts	/home/k/code/ludumdare44/BMbroker/Assets/Scripts/GameController.cs	/^    public ObservableFloat playerCosts;$/;"	field	line:10	class:GameController
+inflationRate	/home/k/code/ludumdare44/BMbroker/Assets/Scripts/GameController.cs	/^    public ObservableFloat inflationRate;$/;"	field	line:11	class:GameController
+currentDate	/home/k/code/ludumdare44/BMbroker/Assets/Scripts/GameController.cs	/^    public ObservableDate currentDate;$/;"	field	line:12	class:GameController
+randomEventsHolder	/home/k/code/ludumdare44/BMbroker/Assets/Scripts/GameController.cs	/^    public RandomEventsHolder randomEventsHolder;$/;"	field	line:14	class:GameController
+randomEventNotification	/home/k/code/ludumdare44/BMbroker/Assets/Scripts/GameController.cs	/^    public NotificationDataEvent randomEventNotification;$/;"	field	line:15	class:GameController
+gameSpawner	/home/k/code/ludumdare44/BMbroker/Assets/Scripts/GameController.cs	/^    public GameSpawner gameSpawner;$/;"	field	line:17	class:GameController
+maingameMusic	/home/k/code/ludumdare44/BMbroker/Assets/Scripts/GameController.cs	/^    public AudioSource maingameMusic;$/;"	field	line:18	class:GameController
+Start	/home/k/code/ludumdare44/BMbroker/Assets/Scripts/GameController.cs	/^    void Start()$/;"	method	line:19	class:GameController	file:	signature:()
+AdvanceGameDate	/home/k/code/ludumdare44/BMbroker/Assets/Scripts/GameController.cs	/^    private IEnumerator AdvanceGameDate(){$/;"	method	line:28	class:GameController	file:	signature:()
+AgeRoutine	/home/k/code/ludumdare44/BMbroker/Assets/Scripts/GameController.cs	/^    private IEnumerator AgeRoutine()$/;"	method	line:36	class:GameController	file:	signature:()
+CheckLosingRoutine	/home/k/code/ludumdare44/BMbroker/Assets/Scripts/GameController.cs	/^    private IEnumerator CheckLosingRoutine(){$/;"	method	line:46	class:GameController	file:	signature:()
+AnnualInflationRoutine	/home/k/code/ludumdare44/BMbroker/Assets/Scripts/GameController.cs	/^    private IEnumerator AnnualInflationRoutine()$/;"	method	line:55	class:GameController	file:	signature:()
+RandomEventRoutine	/home/k/code/ludumdare44/BMbroker/Assets/Scripts/GameController.cs	/^    private IEnumerator RandomEventRoutine()$/;"	method	line:64	class:GameController	file:	signature:()
+GameOver	/home/k/code/ludumdare44/BMbroker/Assets/Scripts/GameController.cs	/^    private void GameOver(){$/;"	method	line:76	class:GameController	file:	signature:()
+SetDefaultValues	/home/k/code/ludumdare44/BMbroker/Assets/Scripts/GameController.cs	/^    public void SetDefaultValues(){$/;"	method	line:81	class:GameController	signature:()
+SetTurboValues	/home/k/code/ludumdare44/BMbroker/Assets/Scripts/GameController.cs	/^    public void SetTurboValues(){$/;"	method	line:86	class:GameController	signature:()
+ProcessRandomEvent	/home/k/code/ludumdare44/BMbroker/Assets/Scripts/GameController.cs	/^    private void ProcessRandomEvent(RandomEvent random)$/;"	method	line:95	class:GameController	file:	signature:(RandomEvent random)
+ShowCurrentDate	/home/k/code/ludumdare44/BMbroker/Assets/Scripts/ShowCurrentDate.cs	/^public class ShowCurrentDate : MonoBehaviour$/;"	class	line:5
+currentDateText	/home/k/code/ludumdare44/BMbroker/Assets/Scripts/ShowCurrentDate.cs	/^  public Text currentDateText;$/;"	field	line:7	class:ShowCurrentDate
+currentDate	/home/k/code/ludumdare44/BMbroker/Assets/Scripts/ShowCurrentDate.cs	/^  public ObservableDate currentDate;$/;"	field	line:8	class:ShowCurrentDate
+Start	/home/k/code/ludumdare44/BMbroker/Assets/Scripts/ShowCurrentDate.cs	/^  void Start() {$/;"	method	line:10	class:ShowCurrentDate	file:	signature:()
+Update	/home/k/code/ludumdare44/BMbroker/Assets/Scripts/ShowCurrentDate.cs	/^  void Update() {$/;"	method	line:15	class:ShowCurrentDate	file:	signature:()

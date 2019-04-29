@@ -9,6 +9,7 @@ public class GameController : MonoBehaviour
     public ObservableFloat playerIncome;
     public ObservableFloat playerCosts;
     public ObservableFloat inflationRate;
+    public ObservableDate currentDate;
 
     public RandomEventsHolder randomEventsHolder;
     public NotificationDataEvent randomEventNotification;
@@ -16,21 +17,29 @@ public class GameController : MonoBehaviour
     public GameSpawner gameSpawner;
     public AudioSource maingameMusic;
     void Start()
-    {   
+    {
         StartCoroutine(AgeRoutine());
         StartCoroutine(RandomEventRoutine());
         StartCoroutine(AnnualInflationRoutine());
         StartCoroutine(CheckLosingRoutine());
+        StartCoroutine(AdvanceGameDate());
     }
-    
-    
+
+    private IEnumerator AdvanceGameDate(){
+      while (true)
+      {
+          this.currentDate.AddMonths(1);
+
+          yield return new WaitForSeconds(tickPeriod.Value());
+      }
+    }
     private IEnumerator AgeRoutine()
     {
         while (true)
         {
             this.playerAge.Add(playerIncome.Value());
             this.playerAge.Substract(playerCosts.Value());
-            
+
             yield return new WaitForSeconds(tickPeriod.Value());
         }
     }
@@ -80,18 +89,18 @@ public class GameController : MonoBehaviour
         playerCosts.Set(0.1f);
         tickPeriod.Set(0.33f);
         maingameMusic.pitch = 2f;
-        
+
     }
-   
+
     private void ProcessRandomEvent(RandomEvent random)
     {
         this.playerAge.Add(random.ageChange);
         this.playerIncome.Add(random.incomingChange);
         this.playerCosts.Add(random.outGoingChange);
         this.inflationRate.Add(random.inflationChange);
-        
+
         randomEventNotification.Fire(new NotificationData(
-            random.description, 
+            random.description,
             random.incomingChange,
             random.outGoingChange,
             random.inflationChange));
