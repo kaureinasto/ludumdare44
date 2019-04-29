@@ -26,8 +26,7 @@ public class GameSpawner : MonoBehaviour {
 	}
 
 	public void destroyGame(){
-
-		endgametext.text = currentGame.gameController.getStats();
+		endgametext.text = currentGame.gameController.getDeathStats();
 		
 		currentGame.SetActive(false);
 		endGameScreen.SetActive(true);

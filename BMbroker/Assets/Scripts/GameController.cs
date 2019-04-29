@@ -21,7 +21,8 @@ public class GameController : MonoBehaviour
     private Coroutine dateincrementor;
     
     private float score;
-    
+    public bool ascended;
+
     void Start()
     {
         aging = StartCoroutine(AgeRoutine());
@@ -65,22 +66,23 @@ public class GameController : MonoBehaviour
             yield return new WaitForSeconds(tickPeriod.Value()/30);
         }
     }
-    public string printScoreString(){
+    public string getAscendScoreString(){
             
-        if(score < 100){
-            return "You ascend and are reborn as a fly. ";
+        if(score < 10){
+            return "You ascend and are reborn as a fly. "+ yourScoreWas(score);
         }
         if(score < 200){
-            return "You ascend and are reborn as a horse. ";
+            return "You ascend and are reborn as a horse. "+ yourScoreWas(score);
         }
         if(score < 300){
-            return "You ascend and are reborn as a horse. ";
+            return "You ascend and are reborn as a horse. "+ yourScoreWas(score);
         }
-        return "You ascend and are reborn as a cockroach. ";
+        return "You ascend and are reborn as a cockroach. " + yourScoreWas(score);
     }
     private string yourScoreWas(float score){
         return "Your score was " + score.ToString() +" .";
     }
+    
     private IEnumerator AnnualInflationRoutine()
     {
         while (true)
@@ -102,9 +104,6 @@ public class GameController : MonoBehaviour
             yield return new WaitForSeconds(tickPeriod.Value());
         }
     }
-    private void GameOver(){
-
-    }
 
     public void SetDefaultValues(){
         playerAge.Set(216.0f);
@@ -120,10 +119,12 @@ public class GameController : MonoBehaviour
         maingameMusic.pitch = 2f;
 
     }
-    public string getStats(){
+    public string getDeathStats(){
         string yearslasted = "You lasted " + currentDate.getYearsLasted() + " years. ";
-        Debug.Log(yearslasted);
-        return yearslasted + yourScoreWas(score) + printScoreString();
+        if(ascended){
+            return yearslasted + getAscendScoreString();
+        }
+        return yearslasted + yourScoreWas(score);
     }
     private void ProcessRandomEvent(RandomEvent random)
     {
