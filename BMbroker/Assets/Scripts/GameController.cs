@@ -78,37 +78,38 @@ public class GameController : MonoBehaviour
         }
     }
     public string getAscendScoreString(){
-        if(score < 5){
+        int balancefactor = 2;
+        if(score < 5*balancefactor){
             return "You ascend and are reborn as a stock broker. "+ yourScoreWas(score);
         }            
-        if(score < 10){
+        if(score < 10*balancefactor){
             return "You ascend and are reborn as a cockroach. "+ yourScoreWas(score);
         }
-        if(score < 200){
+        if(score < 200*balancefactor){
             return "You ascend and are reborn as a horse. "+ yourScoreWas(score);
         }
-        if(score < 300){
+        if(score < 300*balancefactor){
             return "You ascend and are reborn as a pokemon. "+ yourScoreWas(score);
         }
-        if(score < 400){
+        if(score < 400*balancefactor){
             return "You ascend and are reborn as a Jerry Lee Lewis. "+ yourScoreWas(score);
         }
-        if(score < 500){
+        if(score < 500*balancefactor){
             return "You ascend and are reborn as a Cartman. "+ yourScoreWas(score);
         }
-        if(score < 600){
+        if(score < 600*balancefactor){
             return "You ascend and are reborn in an alternate universe as a crack-addicted George W. Bush. "+ yourScoreWas(score);
         }
-        if(score < 700){
+        if(score < 700*balancefactor){
             return "You ascend find yourself walking the streets as a Homer Simpson. "+ yourScoreWas(score);
         }
-        if(score < 800){
+        if(score < 800*balancefactor){
             return "You ascend and are reborn as a Harry Potter. "+ yourScoreWas(score);
         }
-        if(score < 900){
+        if(score < 900*balancefactor){
             return "You ascend and are reborn as a regular dude, tough shit. "+ yourScoreWas(score);
         }
-        if(score < 1000){
+        if(score < 1000*balancefactor){
             return "You ascend and are reborn as a Rick bitch, wubbalubbadubduub. "+ yourScoreWas(score);
         }
         return "You ascend and are reborn as a cockroach. " + yourScoreWas(score);
