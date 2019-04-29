@@ -9,9 +9,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9ddef62b58cf9445abc9256ac3f4097e, type: 3}
-  m_Name: 1300cc Car
+  m_Name: Catnip Plantation
   m_EditorClassIdentifier: 
-  name: Electric Car
-  value: 65
-  incomingRate: 0
-  outgoingRate: 12
+  name: Catnip Plantation
+  value: 800
+  incomingRate: 500
+  outgoingRate: 250

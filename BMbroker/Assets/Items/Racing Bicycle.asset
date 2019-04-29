@@ -11,8 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ddef62b58cf9445abc9256ac3f4097e, type: 3}
   m_Name: Racing Bicycle
   m_EditorClassIdentifier: 
-  picture: {fileID: 21300000, guid: fa6d1482c3093401585bcf43a103d82c, type: 3}
-  name: Racing Bicycle
+  name: Mountain Bike
   value: 6
   incomingRate: 0
   outgoingRate: 2
