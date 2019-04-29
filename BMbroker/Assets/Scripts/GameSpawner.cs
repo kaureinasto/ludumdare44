@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using System;
 
 public class GameSpawner : MonoBehaviour {
 
@@ -8,7 +10,8 @@ public class GameSpawner : MonoBehaviour {
 	public GameInstance game;
 	private GameInstance currentGame;
 	public GameObject endGameScreen;
-	
+	public Text endgametext;	
+
 	public void spawnNormalGame()
 	{
 		this.currentGame = Instantiate(game);
@@ -24,7 +27,8 @@ public class GameSpawner : MonoBehaviour {
 
 	public void destroyGame(){
 
-		//currentGame.GameController.getStats()
+		endgametext.text = currentGame.gameController.getStats();
+		
 		currentGame.SetActive(false);
 		endGameScreen.SetActive(true);
 		Destroy(currentGame);

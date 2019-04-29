@@ -9,27 +9,38 @@ public class GameController : MonoBehaviour
     public ObservableFloat playerIncome;
     public ObservableFloat playerCosts;
     public ObservableFloat inflationRate;
+    public ObservableDate currentDate;
 
     public RandomEventsHolder randomEventsHolder;
     public NotificationDataEvent randomEventNotification;
 
     public GameSpawner gameSpawner;
+    public AudioSource maingameMusic;
+    
     void Start()
-    {   
+    {
         StartCoroutine(AgeRoutine());
         StartCoroutine(RandomEventRoutine());
         StartCoroutine(AnnualInflationRoutine());
         StartCoroutine(CheckLosingRoutine());
+        StartCoroutine(AdvanceGameDay());
     }
-    
-    
+
+    private IEnumerator AdvanceGameDay(){
+      while (true)
+      {
+          this.currentDate.AddDays(1);
+
+          yield return new WaitForSeconds(tickPeriod.Value()/30);
+      }
+    }
     private IEnumerator AgeRoutine()
     {
         while (true)
         {
             this.playerAge.Add(playerIncome.Value());
             this.playerAge.Substract(playerCosts.Value());
-            
+
             yield return new WaitForSeconds(tickPeriod.Value());
         }
     }
@@ -67,16 +78,25 @@ public class GameController : MonoBehaviour
         StopAllCoroutines();
         gameSpawner.destroyGame();
     }
+
     public void SetDefaultValues(){
         playerAge.Set(216.0f);
         playerIncome.Set(1.0f);
         playerCosts.Set(0.0f);
+        tickPeriod.Set(5);
     }
     public void SetTurboValues(){
         playerAge.Set(216f);
         playerIncome.Set(1.1f);
         playerCosts.Set(0.1f);
-        tickPeriod.Set(0.1f);
+        tickPeriod.Set(0.33f);
+        maingameMusic.pitch = 2f;
+
+    }
+    public string getStats(){
+        string yearslasted = "You lasted " + currentDate.getYearsLasted() + " years";
+        Debug.Log(yearslasted);
+        return yearslasted;
     }
     private void ProcessRandomEvent(RandomEvent random)
     {
@@ -84,9 +104,9 @@ public class GameController : MonoBehaviour
         this.playerIncome.Add(random.incomingChange);
         this.playerCosts.Add(random.outGoingChange);
         this.inflationRate.Add(random.inflationChange);
-        
+
         randomEventNotification.Fire(new NotificationData(
-            random.description, 
+            random.description,
             random.incomingChange,
             random.outGoingChange,
             random.inflationChange));
