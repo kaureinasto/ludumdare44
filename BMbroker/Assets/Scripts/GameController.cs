@@ -125,9 +125,10 @@ public class GameController : MonoBehaviour
         if(score < 1000*balancefactor){
             return "You ascend and are reborn as a Rick, bitch, wubbalubbadubduub. "+ yourScoreWas(score);
         }
-        if(score < 1200*balancefactor){
+        if(score > 1200*balancefactor){
             return "You ascend and are reborn as a thousand year old tree. Get ready to grow!!!"+ yourScoreWas(score);
         }
+        
         return "You ascend and are reborn as a insect, tough break. " + yourScoreWas(score);
     }
     private string yourScoreWas(float score){
