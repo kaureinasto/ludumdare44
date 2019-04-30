@@ -15,7 +15,7 @@ public class ageTextController : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		this.currentAge.text = "Current Age: " + (int)Math.Ceiling(this.age.Value()/12 - 1) + " years old. (Debug: " + this.age.Value() + " months)";
+		this.currentAge.text = "Current Age: " + (int)Math.Floor(this.age.Value()/12) + " years old.";
 	}
 
 }
