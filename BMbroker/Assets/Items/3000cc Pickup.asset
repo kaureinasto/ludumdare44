@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ddef62b58cf9445abc9256ac3f4097e, type: 3}
   m_Name: 3000cc Pickup
   m_EditorClassIdentifier: 
-  name: Diamond studed T-34 Tank
+  name: Diamond studded T-34 Tank
   value: 100
   incomingRate: 0
   outgoingRate: 25
