@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
@@ -27,7 +26,6 @@ public class GameController : MonoBehaviour
 
     private float score;
     public bool ascended = false;
-    public Button ascendButton;
 
     void Start()
     {
@@ -72,7 +70,6 @@ public class GameController : MonoBehaviour
             } 
 
             if( playerAge.Value() < 0 || playerAge.Value() > 1200) {
-                ascendButton.enabled = false;
                 StopCoroutine(RandomEventRoutine());
                 StopCoroutine(aging);
                 StopCoroutine(random);
